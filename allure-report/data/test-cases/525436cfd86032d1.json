@@ -1,0 +1,52 @@
+{
+  "uid" : "525436cfd86032d1",
+  "name" : "1. Successful Logout Test",
+  "historyId" : "415d054d5fb53410718b2671b41f06e3",
+  "time" : {
+    "start" : 1725887486550,
+    "stop" : 1725887486559,
+    "duration" : 9
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.logout.logout.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-57"
+  }, {
+    "name" : "suite",
+    "value" : "Logout Test"
+  }, {
+    "name" : "feature",
+    "value" : "Logout Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "525436cfd86032d1.json",
+  "parameterValues" : [ "619caaeb" ]
+}

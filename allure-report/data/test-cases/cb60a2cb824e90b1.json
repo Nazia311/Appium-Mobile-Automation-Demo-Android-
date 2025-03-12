@@ -1,0 +1,52 @@
+{
+  "uid" : "cb60a2cb824e90b1",
+  "name" : "1. Verify successful last 25 transaction test",
+  "historyId" : "94758eca3020a0ba8caf46e083c48d95",
+  "time" : {
+    "start" : 1725887399226,
+    "stop" : 1725887405564,
+    "duration" : 6338
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.last-25-transactions.last-25-transactions.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-53"
+  }, {
+    "name" : "suite",
+    "value" : "Last 25 Transaction Test"
+  }, {
+    "name" : "feature",
+    "value" : "Last 25 Transaction Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cb60a2cb824e90b1.json",
+  "parameterValues" : [ "619caaeb" ]
+}

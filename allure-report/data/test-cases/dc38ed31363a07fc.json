@@ -1,0 +1,52 @@
+{
+  "uid" : "dc38ed31363a07fc",
+  "name" : "1. Successful fund transfer to other bank card(NPSB) ",
+  "historyId" : "8ba48c18f2be0623dac729f2c2fea145",
+  "time" : {
+    "start" : 1725887180329,
+    "stop" : 1725887206180,
+    "duration" : 25851
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.ft-npsb-card.ft-npsb-card.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-47"
+  }, {
+    "name" : "suite",
+    "value" : "NPSB FT Card Test"
+  }, {
+    "name" : "feature",
+    "value" : "NPSB FT Card Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dc38ed31363a07fc.json",
+  "parameterValues" : [ "619caaeb" ]
+}

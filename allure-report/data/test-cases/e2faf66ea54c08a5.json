@@ -1,0 +1,76 @@
+{
+  "uid" : "e2faf66ea54c08a5",
+  "name" : "2. Verify that user can not add a duplicate npsb card beneficiary from beneficiary management screen ",
+  "historyId" : "7b9b108024b42166d77510d0aa5878b1",
+  "time" : {
+    "start" : 1725885788942,
+    "stop" : 1725885829128,
+    "duration" : 40186
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-beftn-card.beneficiary-beftn-card.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-9"
+  }, {
+    "name" : "suite",
+    "value" : "BEFTN Card Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "BEFTN Card Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "97c7818f2fd039c4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725884478454,
+        "stop" : 1725884521358,
+        "duration" : 42904
+      }
+    }, {
+      "uid" : "483fcdee89cc8b89",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725883821866,
+        "stop" : 1725883861817,
+        "duration" : 39951
+      }
+    }, {
+      "uid" : "24d18c5dde37806d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725883064117,
+        "stop" : 1725883105814,
+        "duration" : 41697
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e2faf66ea54c08a5.json",
+  "parameterValues" : [ "619caaeb" ]
+}

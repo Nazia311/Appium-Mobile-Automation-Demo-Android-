@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Can't call click on element with selector \"android=new UiSelector().description(\"Shyamoli Branch GRG ATM\")\" because element wasn't found",
+      "children" : [ {
+        "name" : "2. Verify successful Agrani Map Test",
+        "uid" : "cf7032ee667b385b",
+        "parentUid" : "694e2a785d60839f5d72a3ef5ba98a02",
+        "status" : "broken",
+        "time" : {
+          "start" : 1725885535652,
+          "stop" : 1725885577840,
+          "duration" : 42188
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "694e2a785d60839f5d72a3ef5ba98a02"
+    }, {
+      "name" : "Can't call click on element with selector \"~কাস্টমার সাপোর্ট\" because element wasn't found",
+      "children" : [ {
+        "name" : "2. Verify successful Customer Support Test",
+        "uid" : "a9cef1853cbc40a9",
+        "parentUid" : "1219da69fbbd7d32f4da8d303b494076",
+        "status" : "broken",
+        "time" : {
+          "start" : 1725886505247,
+          "stop" : 1725886540423,
+          "duration" : 35176
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "1219da69fbbd7d32f4da8d303b494076"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

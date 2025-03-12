@@ -1,0 +1,60 @@
+{
+  "uid" : "4cbcdec6d821fb3b",
+  "name" : "1.Verify unsuccessful Change Password Test",
+  "historyId" : "e3c695c72402ec61eda100a5729caa60",
+  "time" : {
+    "start" : 1725886367313,
+    "stop" : 1725886381833,
+    "duration" : 14520
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.change-password.change-password.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-23"
+  }, {
+    "name" : "suite",
+    "value" : "Change Password Test"
+  }, {
+    "name" : "feature",
+    "value" : "Change Password Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ba4eeccacf6706dc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725885073875,
+        "stop" : 1725885088378,
+        "duration" : 14503
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4cbcdec6d821fb3b.json",
+  "parameterValues" : [ "619caaeb" ]
+}

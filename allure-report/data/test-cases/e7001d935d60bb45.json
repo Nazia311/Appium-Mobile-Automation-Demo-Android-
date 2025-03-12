@@ -1,0 +1,52 @@
+{
+  "uid" : "e7001d935d60bb45",
+  "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+  "historyId" : "5c74d7e5ee9347d92709ce6095e91a67",
+  "time" : {
+    "start" : 1725887122946,
+    "stop" : 1725887135848,
+    "duration" : 12902
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.ft-npsb-acc.ft-npsb-acc.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-45"
+  }, {
+    "name" : "suite",
+    "value" : "NPSB FT Account Test"
+  }, {
+    "name" : "feature",
+    "value" : "NPSB FT Account Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e7001d935d60bb45.json",
+  "parameterValues" : [ "619caaeb" ]
+}

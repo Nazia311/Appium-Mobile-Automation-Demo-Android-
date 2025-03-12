@@ -1,0 +1,78 @@
+{
+  "uid" : "630bfad9d51368aa",
+  "name" : "2. Verify that user can not add a duplicate intra beneficiary from beneficiary management screen ",
+  "historyId" : "4cfaca70d032a8122915145860b870ec",
+  "time" : {
+    "start" : 1725885901314,
+    "stop" : 1725885926446,
+    "duration" : 25132
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-intra.beneficiary-intra.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-11"
+  }, {
+    "name" : "suite",
+    "value" : "Intra Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "Intra Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "806221afbcdc393e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725884597074,
+        "stop" : 1725884621979,
+        "duration" : 24905
+      }
+    }, {
+      "uid" : "70f6c5bb6f7bbb90",
+      "status" : "broken",
+      "statusDetails" : "Can't call isEnabled on element with selector \"android=new UiSelector().className(\"android.widget.Button\")\" because element wasn't found",
+      "time" : {
+        "start" : 1725883955592,
+        "stop" : 1725883989469,
+        "duration" : 33877
+      }
+    }, {
+      "uid" : "4e31696d31c5b15b",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]\" because element wasn't found",
+      "time" : {
+        "start" : 1725883216355,
+        "stop" : 1725883254790,
+        "duration" : 38435
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "630bfad9d51368aa.json",
+  "parameterValues" : [ "619caaeb" ]
+}

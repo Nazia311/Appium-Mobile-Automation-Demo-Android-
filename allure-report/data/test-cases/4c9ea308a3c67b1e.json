@@ -1,0 +1,50 @@
+{
+  "uid" : "4c9ea308a3c67b1e",
+  "name" : "1. Verify beftn beneficiary management screen navigation",
+  "historyId" : "ed3fe2bbb9dd9d65e36e143cb6174399",
+  "time" : {
+    "start" : 1725884310433,
+    "stop" : 1725884352752,
+    "duration" : 42319
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-beftn-acc.beneficiary-beftn-acc.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-7"
+  }, {
+    "name" : "suite",
+    "value" : "BEFTN Account Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "BEFTN Account Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4c9ea308a3c67b1e.json",
+  "parameterValues" : [ "619caaeb" ]
+}

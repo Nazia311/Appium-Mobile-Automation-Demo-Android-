@@ -1,0 +1,895 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : ".home.tisha.projects.agrani-app-automation.test.specs",
+    "children" : [ {
+      "name" : "advance-loan-calculator.advance-loan-calculator.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessful Advance Loan Calculator Test",
+        "uid" : "4c22f8faba7f91a6",
+        "parentUid" : "3eba126ea23b725fa53f2b66cf093612",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885403394,
+          "stop" : 1725885410316,
+          "duration" : 6922
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successful Advance Loan Calculator Test",
+        "uid" : "ea7f17891e595ed4",
+        "parentUid" : "3eba126ea23b725fa53f2b66cf093612",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885410317,
+          "stop" : 1725885429192,
+          "duration" : 18875
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "advance-loan-calculator.advance-loan-calculator.spec.js"
+    }, {
+      "name" : "agrani-location.agrani-location.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessful Agrani Location Test",
+        "uid" : "e1e9ef47e81b4db7",
+        "parentUid" : "9dd8a78e6534d7c956d944bc0855177b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885469692,
+          "stop" : 1725885472128,
+          "duration" : 2436
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successful Agrani Location Test",
+        "uid" : "4881c061aecb29b6",
+        "parentUid" : "9dd8a78e6534d7c956d944bc0855177b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885472129,
+          "stop" : 1725885490132,
+          "duration" : 18003
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "agrani-location.agrani-location.spec.js"
+    }, {
+      "name" : "agrani-map.agrani-map.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessful Agrani Map Test",
+        "uid" : "bd3432300f71e50a",
+        "parentUid" : "6a8f6dba813d50ef6fb2114b9bfa1149",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885530598,
+          "stop" : 1725885535651,
+          "duration" : 5053
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successful Agrani Map Test",
+        "uid" : "cf7032ee667b385b",
+        "parentUid" : "6a8f6dba813d50ef6fb2114b9bfa1149",
+        "status" : "broken",
+        "time" : {
+          "start" : 1725885535652,
+          "stop" : 1725885577840,
+          "duration" : 42188
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "agrani-map.agrani-map.spec.js"
+    }, {
+      "name" : "beneficiary-beftn-acc.beneficiary-beftn-acc.spec.js",
+      "children" : [ {
+        "name" : "1. Verify beftn beneficiary management screen navigation",
+        "uid" : "341bc6535977cc55",
+        "parentUid" : "61f7b7a9186e051c74bb31f9cb9f2334",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885621396,
+          "stop" : 1725885662327,
+          "duration" : 40931
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify that user can not add a duplicate beftn acc beneficiary from beneficiary management screen ",
+        "uid" : "8c460a8e1eb09428",
+        "parentUid" : "61f7b7a9186e051c74bb31f9cb9f2334",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885662328,
+          "stop" : 1725885702288,
+          "duration" : 39960
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "beneficiary-beftn-acc.beneficiary-beftn-acc.spec.js"
+    }, {
+      "name" : "beneficiary-beftn-card.beneficiary-beftn-card.spec.js",
+      "children" : [ {
+        "name" : "1. Verify BEFTN beneficiary management screen navigation",
+        "uid" : "ff3d11c5bcac5825",
+        "parentUid" : "b8bfcbfd916223dbf26c9d10d879af41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885745405,
+          "stop" : 1725885788941,
+          "duration" : 43536
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify that user can not add a duplicate npsb card beneficiary from beneficiary management screen ",
+        "uid" : "e2faf66ea54c08a5",
+        "parentUid" : "b8bfcbfd916223dbf26c9d10d879af41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885788942,
+          "stop" : 1725885829128,
+          "duration" : 40186
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "beneficiary-beftn-card.beneficiary-beftn-card.spec.js"
+    }, {
+      "name" : "beneficiary-intra.beneficiary-intra.spec.js",
+      "children" : [ {
+        "name" : "1. Verify intra beneficiary management screen navigation",
+        "uid" : "cad4dad6a679c6b0",
+        "parentUid" : "90e91e622c67ed2be211e7b5101c4da3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885871439,
+          "stop" : 1725885901313,
+          "duration" : 29874
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify that user can not add a duplicate intra beneficiary from beneficiary management screen ",
+        "uid" : "630bfad9d51368aa",
+        "parentUid" : "90e91e622c67ed2be211e7b5101c4da3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885901314,
+          "stop" : 1725885926446,
+          "duration" : 25132
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "beneficiary-intra.beneficiary-intra.spec.js"
+    }, {
+      "name" : "beneficiary-nagad.nagad-beneficiary.spec.js",
+      "children" : [ {
+        "name" : "1. Successfully add nagad beneficiary test",
+        "uid" : "85d630ce3e692474",
+        "parentUid" : "a963d7aec0a8d445f299bdd7c04c5bd7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885968526,
+          "stop" : 1725885994442,
+          "duration" : 25916
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful add nagad beneficiary test for without giving nagad number",
+        "uid" : "b8d07527de0de01a",
+        "parentUid" : "a963d7aec0a8d445f299bdd7c04c5bd7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725885994443,
+          "stop" : 1725886001080,
+          "duration" : 6637
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "beneficiary-nagad.nagad-beneficiary.spec.js"
+    }, {
+      "name" : "beneficiary-npsb-acc.beneficiary-npsb-acc.spec.js",
+      "children" : [ {
+        "name" : "1. Verify npsb beneficiary management screen navigation",
+        "uid" : "80da579061ff7b18",
+        "parentUid" : "cf3b9bdf26181026e88285acccd859ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886039950,
+          "stop" : 1725886083944,
+          "duration" : 43994
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify that user can not add a duplicate npsb beneficiary from beneficiary management screen ",
+        "uid" : "812c355dc5e711",
+        "parentUid" : "cf3b9bdf26181026e88285acccd859ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886083945,
+          "stop" : 1725886127037,
+          "duration" : 43092
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "beneficiary-npsb-acc.beneficiary-npsb-acc.spec.js"
+    }, {
+      "name" : "beneficiary-npsb-card.beneficiary-npsb-card.spec.js",
+      "children" : [ {
+        "name" : "1. Verify npsb beneficiary management screen navigation",
+        "uid" : "b1e6b847d1fccf0e",
+        "parentUid" : "2a39c95c7137edc551701dfe721f06cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886166766,
+          "stop" : 1725886200935,
+          "duration" : 34169
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify that user can not add a duplicate npsb card beneficiary from beneficiary management screen ",
+        "uid" : "59301634ae6a3465",
+        "parentUid" : "2a39c95c7137edc551701dfe721f06cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886200936,
+          "stop" : 1725886234603,
+          "duration" : 33667
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "beneficiary-npsb-card.beneficiary-npsb-card.spec.js"
+    }, {
+      "name" : "bkash-beneficiary.bkash-beneficiary.spec.js",
+      "children" : [ {
+        "name" : "1. Verify intra beneficiary management screen navigation",
+        "uid" : "6893e5d89921649a",
+        "parentUid" : "d9de5c1d39191d3266728aab9e9e6e2c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886277389,
+          "stop" : 1725886283994,
+          "duration" : 6605
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "bkash-beneficiary.bkash-beneficiary.spec.js"
+    }, {
+      "name" : "call-support.call-support.spec.js",
+      "children" : [ {
+        "name" : "1. Successful Call Support Test",
+        "uid" : "f2bf907513d69869",
+        "parentUid" : "0aed4d77b2156e15b09161c372c61920",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886325560,
+          "stop" : 1725886325570,
+          "duration" : 10
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "call-support.call-support.spec.js"
+    }, {
+      "name" : "change-password.change-password.spec.js",
+      "children" : [ {
+        "name" : "1.Verify unsuccessful Change Password Test",
+        "uid" : "4cbcdec6d821fb3b",
+        "parentUid" : "bc94ca7289bec6d4d2bac4e8cbf5d5ad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886367313,
+          "stop" : 1725886381833,
+          "duration" : 14520
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successful Change Password Test",
+        "uid" : "a11d2c6a13f1ba00",
+        "parentUid" : "bc94ca7289bec6d4d2bac4e8cbf5d5ad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886381835,
+          "stop" : 1725886398917,
+          "duration" : 17082
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "change-password.change-password.spec.js"
+    }, {
+      "name" : "customer-profile.customer-profile.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessfull Customer Profile Test",
+        "uid" : "82143c20861a4afe",
+        "parentUid" : "b8ea979192ac8a07b38fe0c936791bdd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886451968,
+          "stop" : 1725886456750,
+          "duration" : 4782
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify sucessfull Customer Profile Test",
+        "uid" : "4fde86c44a3c69da",
+        "parentUid" : "b8ea979192ac8a07b38fe0c936791bdd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886456751,
+          "stop" : 1725886462208,
+          "duration" : 5457
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "customer-profile.customer-profile.spec.js"
+    }, {
+      "name" : "customer-support.customer-support.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessful Customer Support Test",
+        "uid" : "f15d60801380ac87",
+        "parentUid" : "be044efa174cc035022d64d95f2871e9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886501208,
+          "stop" : 1725886505244,
+          "duration" : 4036
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successful Customer Support Test",
+        "uid" : "a9cef1853cbc40a9",
+        "parentUid" : "be044efa174cc035022d64d95f2871e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1725886505247,
+          "stop" : 1725886540423,
+          "duration" : 35176
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "customer-support.customer-support.spec.js"
+    }, {
+      "name" : "emi-calculator.emi-calculator.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessful EMI Calculator Test",
+        "uid" : "d15f4b7379a2534b",
+        "parentUid" : "6c7b1f74800ab56b1ba2fde2bfb543f8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886585448,
+          "stop" : 1725886592649,
+          "duration" : 7201
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successful EMI Calculator Test",
+        "uid" : "8e1e9ad984c61a44",
+        "parentUid" : "6c7b1f74800ab56b1ba2fde2bfb543f8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886592652,
+          "stop" : 1725886603849,
+          "duration" : 11197
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "emi-calculator.emi-calculator.spec.js"
+    }, {
+      "name" : "exchange-rate.exchange-rate.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessful Exchange Rate Test",
+        "uid" : "107db2072f124081",
+        "parentUid" : "37df564a75c5a154b513afff6a840805",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886647252,
+          "stop" : 1725886650063,
+          "duration" : 2811
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successful Exchange Rate Test",
+        "uid" : "e5c6d70a1f02651c",
+        "parentUid" : "37df564a75c5a154b513afff6a840805",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886650064,
+          "stop" : 1725886654465,
+          "duration" : 4401
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "exchange-rate.exchange-rate.spec.js"
+    }, {
+      "name" : "faq.faq.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessful FAQ Test",
+        "uid" : "34734849ff941941",
+        "parentUid" : "8a1aa3fece6a140e3d9b8cfcd2c6e6e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886698585,
+          "stop" : 1725886700586,
+          "duration" : 2001
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify unsuccessful FAQ Test",
+        "uid" : "564ba9b9253a493a",
+        "parentUid" : "8a1aa3fece6a140e3d9b8cfcd2c6e6e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886700587,
+          "stop" : 1725886703919,
+          "duration" : 3332
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "faq.faq.spec.js"
+    }, {
+      "name" : "forgot-password.forgot-password.spec.js",
+      "children" : [ {
+        "name" : "1. Successful Forgot Password Test",
+        "uid" : "966f50f2e9e13810",
+        "parentUid" : "aedd222e5fa8a726f2b08e3fdce38908",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886744057,
+          "stop" : 1725886744065,
+          "duration" : 8
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "forgot-password.forgot-password.spec.js"
+    }, {
+      "name" : "ft-beftn-acc.ft-beftn-acc.spec.js",
+      "children" : [ {
+        "name" : "1. Successful fund transfer to other bank account(BEFTN)",
+        "uid" : "2c223d6e46210137",
+        "parentUid" : "a3976b7f7c06c2f75380c0212cd80fab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886785297,
+          "stop" : 1725886807131,
+          "duration" : 21834
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+        "uid" : "fcaba1277c796b66",
+        "parentUid" : "a3976b7f7c06c2f75380c0212cd80fab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886807133,
+          "stop" : 1725886821470,
+          "duration" : 14337
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "ft-beftn-acc.ft-beftn-acc.spec.js"
+    }, {
+      "name" : "ft-beftn-card.ft-beftn-card.spec.js",
+      "children" : [ {
+        "name" : "1. Successful fund transfer to other bank card(BEFTN)",
+        "uid" : "e3469aeee32d5310",
+        "parentUid" : "7652faa9fa65d9ee58c0423ea5aa1027",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886864261,
+          "stop" : 1725886886314,
+          "duration" : 22053
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+        "uid" : "8eb2ef73a017844f",
+        "parentUid" : "7652faa9fa65d9ee58c0423ea5aa1027",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886886315,
+          "stop" : 1725886899155,
+          "duration" : 12840
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "ft-beftn-card.ft-beftn-card.spec.js"
+    }, {
+      "name" : "ft-intra.ft-intra.spec.js",
+      "children" : [ {
+        "name" : "1. Verify Transfer to Own Account screen navigation ",
+        "uid" : "8da23a902c7c3410",
+        "parentUid" : "7485be24c6e08f22150eb942e4d1be12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886940765,
+          "stop" : 1725886964667,
+          "duration" : 23902
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+        "uid" : "57ecd5938ab63c13",
+        "parentUid" : "7485be24c6e08f22150eb942e4d1be12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725886964671,
+          "stop" : 1725886978020,
+          "duration" : 13349
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "ft-intra.ft-intra.spec.js"
+    }, {
+      "name" : "ft-nagad.nagad-transfer.spec.js",
+      "children" : [ {
+        "name" : "1. Successful Nagad Transfer Test",
+        "uid" : "d424697c31b047bf",
+        "parentUid" : "5be618d5b198df2b84691acb581d9d3d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887018846,
+          "stop" : 1725887040746,
+          "duration" : 21900
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful Nagad Transfer Test",
+        "uid" : "ef18ac6f1b84f701",
+        "parentUid" : "5be618d5b198df2b84691acb581d9d3d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887040749,
+          "stop" : 1725887053206,
+          "duration" : 12457
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "ft-nagad.nagad-transfer.spec.js"
+    }, {
+      "name" : "ft-npsb-acc.ft-npsb-acc.spec.js",
+      "children" : [ {
+        "name" : "1. Successful fund transfer to other bank account(NPSB)",
+        "uid" : "a0b9293490aef313",
+        "parentUid" : "0fa3c61fbc1dfd79ea532234c75eb45f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887094491,
+          "stop" : 1725887122940,
+          "duration" : 28449
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+        "uid" : "e7001d935d60bb45",
+        "parentUid" : "0fa3c61fbc1dfd79ea532234c75eb45f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887122946,
+          "stop" : 1725887135848,
+          "duration" : 12902
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "ft-npsb-acc.ft-npsb-acc.spec.js"
+    }, {
+      "name" : "ft-npsb-card.ft-npsb-card.spec.js",
+      "children" : [ {
+        "name" : "1. Successful fund transfer to other bank card(NPSB) ",
+        "uid" : "dc38ed31363a07fc",
+        "parentUid" : "ef555e1c88b1e92e3ef4fe23386802b0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887180329,
+          "stop" : 1725887206180,
+          "duration" : 25851
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+        "uid" : "72876498c62b9615",
+        "parentUid" : "ef555e1c88b1e92e3ef4fe23386802b0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887206182,
+          "stop" : 1725887220664,
+          "duration" : 14482
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "ft-npsb-card.ft-npsb-card.spec.js"
+    }, {
+      "name" : "ft-own.ft-own.spec.js",
+      "children" : [ {
+        "name" : "1. Verify Transfer to Own Account screen  navigation ",
+        "uid" : "3f4e44510ec78321",
+        "parentUid" : "1dcb63015bc6efa7703ae9793de9ee42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887258753,
+          "stop" : 1725887279210,
+          "duration" : 20457
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+        "uid" : "525f280444b8e5ed",
+        "parentUid" : "1dcb63015bc6efa7703ae9793de9ee42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887279214,
+          "stop" : 1725887293164,
+          "duration" : 13950
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "ft-own.ft-own.spec.js"
+    }, {
+      "name" : "interest-rate.interest-rate.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessfull Interest Rate Test",
+        "uid" : "e36c71aaf60acd0",
+        "parentUid" : "e0a505127c4a313b6811d13683c84139",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887334915,
+          "stop" : 1725887338578,
+          "duration" : 3663
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successfull Interest Rate Test",
+        "uid" : "9cd97146529fe58a",
+        "parentUid" : "e0a505127c4a313b6811d13683c84139",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887338580,
+          "stop" : 1725887358456,
+          "duration" : 19876
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "interest-rate.interest-rate.spec.js"
+    }, {
+      "name" : "last-25-transactions.last-25-transactions.spec.js",
+      "children" : [ {
+        "name" : "1. Verify successful last 25 transaction test",
+        "uid" : "cb60a2cb824e90b1",
+        "parentUid" : "0dec2d0c417dca39a45bf5b7d2789bca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887399226,
+          "stop" : 1725887405564,
+          "duration" : 6338
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "last-25-transactions.last-25-transactions.spec.js"
+    }, {
+      "name" : "login.login.spec.js",
+      "children" : [ {
+        "name" : "1. Successful Login Test",
+        "uid" : "3da1e8b21ce66031",
+        "parentUid" : "03fdc5d003f6f71f5f9264985b964802",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887445243,
+          "stop" : 1725887445251,
+          "duration" : 8
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "login.login.spec.js"
+    }, {
+      "name" : "logout.logout.spec.js",
+      "children" : [ {
+        "name" : "1. Successful Logout Test",
+        "uid" : "525436cfd86032d1",
+        "parentUid" : "dfb5c41510591828a89b592247677be2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887486550,
+          "stop" : 1725887486559,
+          "duration" : 9
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "logout.logout.spec.js"
+    }, {
+      "name" : "mobile-recharge.mobile-recharge.spec.js",
+      "children" : [ {
+        "name" : "1. Successful Mobile Recharge Test",
+        "uid" : "9677d4365e839d5f",
+        "parentUid" : "97ccea2e6db12ec1c1a85aaba48f0d25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887530009,
+          "stop" : 1725887573923,
+          "duration" : 43914
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Unsuccessful Mobile Recharge Test",
+        "uid" : "57af731e57f5691d",
+        "parentUid" : "97ccea2e6db12ec1c1a85aaba48f0d25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887573925,
+          "stop" : 1725887585959,
+          "duration" : 12034
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "mobile-recharge.mobile-recharge.spec.js"
+    }, {
+      "name" : "news-events.news-events.spec.js",
+      "children" : [ {
+        "name" : "1. Verify unsuccessful News Events Test",
+        "uid" : "eeba6c7be80a894a",
+        "parentUid" : "1229468594237d2476488c2b2f10a78b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887626942,
+          "stop" : 1725887632032,
+          "duration" : 5090
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      }, {
+        "name" : "2. Verify successful News Events Test",
+        "uid" : "95a2889993b5bcbf",
+        "parentUid" : "1229468594237d2476488c2b2f10a78b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887632033,
+          "stop" : 1725887634630,
+          "duration" : 2597
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "news-events.news-events.spec.js"
+    }, {
+      "name" : "see-account-balance.see-account-balance.spec.js",
+      "children" : [ {
+        "name" : "1. Successful See Account Balance Test",
+        "uid" : "50b5a6fc731eb7dd",
+        "parentUid" : "b4ee4178c656710f9bfca55e0c69dd45",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887683989,
+          "stop" : 1725887683999,
+          "duration" : 10
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "see-account-balance.see-account-balance.spec.js"
+    }, {
+      "name" : "transfer-history.transfer-history.spec.js",
+      "children" : [ {
+        "name" : "1. Verify successful transfer history test",
+        "uid" : "93183ffac1b06e07",
+        "parentUid" : "b6289eb64725471f138c91a6eceb7938",
+        "status" : "passed",
+        "time" : {
+          "start" : 1725887728220,
+          "stop" : 1725887735815,
+          "duration" : 7595
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "619caaeb" ]
+      } ],
+      "uid" : "transfer-history.transfer-history.spec.js"
+    } ],
+    "uid" : ".home.tisha.projects.agrani-app-automation.test.specs"
+  } ]
+}

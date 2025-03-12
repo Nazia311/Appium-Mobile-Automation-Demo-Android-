@@ -1,0 +1,50 @@
+{
+  "uid" : "a7eaae8d67713270",
+  "name" : "1. Verify npsb beneficiary management screen navigation",
+  "historyId" : "cd1f7f70823ff13f263d64f649b84ded",
+  "time" : {
+    "start" : 1725884874429,
+    "stop" : 1725884906618,
+    "duration" : 32189
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-npsb-card.beneficiary-npsb-card.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-17"
+  }, {
+    "name" : "suite",
+    "value" : "NPSB Card Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "NPSB Card Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a7eaae8d67713270.json",
+  "parameterValues" : [ "619caaeb" ]
+}

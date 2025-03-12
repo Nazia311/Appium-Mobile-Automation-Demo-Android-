@@ -1,0 +1,52 @@
+{
+  "uid" : "2c223d6e46210137",
+  "name" : "1. Successful fund transfer to other bank account(BEFTN)",
+  "historyId" : "8d20d17cdd852b22358e78bdfb43e062",
+  "time" : {
+    "start" : 1725886785297,
+    "stop" : 1725886807131,
+    "duration" : 21834
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.ft-beftn-acc.ft-beftn-acc.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-37"
+  }, {
+    "name" : "suite",
+    "value" : "BEFTN FT Account Test"
+  }, {
+    "name" : "feature",
+    "value" : "BEFTN FT Account Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2c223d6e46210137.json",
+  "parameterValues" : [ "619caaeb" ]
+}

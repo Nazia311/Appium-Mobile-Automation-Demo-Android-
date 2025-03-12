@@ -1,0 +1,50 @@
+{
+  "uid" : "125c1c88a5560909",
+  "name" : "2. Verify successful Advance Loan Calculator Test",
+  "historyId" : "7b3a973dd91215235018e6de9b8cca82",
+  "time" : {
+    "start" : 1725882137379,
+    "stop" : 1725882156581,
+    "duration" : 19202
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.advance-loan-calculator.advance-loan-calculator.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Advance Loan Calculator Test"
+  }, {
+    "name" : "feature",
+    "value" : "Advance Loan Calculator Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "125c1c88a5560909.json",
+  "parameterValues" : [ "619caaeb" ]
+}

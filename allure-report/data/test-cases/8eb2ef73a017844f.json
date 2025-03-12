@@ -1,0 +1,52 @@
+{
+  "uid" : "8eb2ef73a017844f",
+  "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+  "historyId" : "f04af01ff1b7b969a81cbdf9fdfbe5d4",
+  "time" : {
+    "start" : 1725886886315,
+    "stop" : 1725886899155,
+    "duration" : 12840
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.ft-beftn-card.ft-beftn-card.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-39"
+  }, {
+    "name" : "suite",
+    "value" : "BEFTN FT Card Test"
+  }, {
+    "name" : "feature",
+    "value" : "BEFTN FT Card Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8eb2ef73a017844f.json",
+  "parameterValues" : [ "619caaeb" ]
+}

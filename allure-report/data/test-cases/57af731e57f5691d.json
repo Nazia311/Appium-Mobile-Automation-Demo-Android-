@@ -1,0 +1,52 @@
+{
+  "uid" : "57af731e57f5691d",
+  "name" : "2. Unsuccessful Mobile Recharge Test",
+  "historyId" : "4c6434fb01e32e0347dcdfd43002fad8",
+  "time" : {
+    "start" : 1725887573925,
+    "stop" : 1725887585959,
+    "duration" : 12034
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.mobile-recharge.mobile-recharge.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-59"
+  }, {
+    "name" : "suite",
+    "value" : "Mobile Recharge Test"
+  }, {
+    "name" : "feature",
+    "value" : "Mobile Recharge Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "57af731e57f5691d.json",
+  "parameterValues" : [ "619caaeb" ]
+}

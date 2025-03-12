@@ -1,0 +1,92 @@
+{
+  "uid" : "ea7f17891e595ed4",
+  "name" : "2. Verify successful Advance Loan Calculator Test",
+  "historyId" : "7b3a973dd91215235018e6de9b8cca82",
+  "time" : {
+    "start" : 1725885410317,
+    "stop" : 1725885429192,
+    "duration" : 18875
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.advance-loan-calculator.advance-loan-calculator.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Advance Loan Calculator Test"
+  }, {
+    "name" : "feature",
+    "value" : "Advance Loan Calculator Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "261cce15086d1158",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725884088266,
+        "stop" : 1725884107615,
+        "duration" : 19349
+      }
+    }, {
+      "uid" : "327f4a174ae2225c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725883408963,
+        "stop" : 1725883427787,
+        "duration" : 18824
+      }
+    }, {
+      "uid" : "8507bc87f94b1f44",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725882668443,
+        "stop" : 1725882687546,
+        "duration" : 19103
+      }
+    }, {
+      "uid" : "125c1c88a5560909",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725882137379,
+        "stop" : 1725882156581,
+        "duration" : 19202
+      }
+    }, {
+      "uid" : "9fbc0d14e84593d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725881781595,
+        "stop" : 1725881800357,
+        "duration" : 18762
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ea7f17891e595ed4.json",
+  "parameterValues" : [ "619caaeb" ]
+}

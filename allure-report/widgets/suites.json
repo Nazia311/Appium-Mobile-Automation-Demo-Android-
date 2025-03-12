@@ -1,0 +1,114 @@
+{
+  "total" : 33,
+  "items" : [ {
+    "uid" : "2d7953a50994acefe7dd55c28f987d48",
+    "name" : "Agrani Map Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "f5c25a4b2e03fc21c3024e3b5606fd79",
+    "name" : "Customer Support Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "a72063b43de4a6cf1d0bbba84bc2d0fb",
+    "name" : "Advance Loan Calculator Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "a6306d7bb63ee56bd7348461789df53d",
+    "name" : "Agrani Location Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "d1646262ebc33c48105c8e14eb21397b",
+    "name" : "BEFTN Account Beneficiary Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "1090ba4ca9925885bfcf400802ba0e51",
+    "name" : "BEFTN Card Beneficiary Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "8fc04d4923cd9252988ca386c257675b",
+    "name" : "Intra Beneficiary Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "f7cd37ba9c595d24b0fb2c655226de4d",
+    "name" : "Nagad Beneficiary Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "e5c7ded76f78878909229b0159010918",
+    "name" : "NPSB Account Beneficiary Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "715b5b15fa01198d8e5ed83f81f892b8",
+    "name" : "NPSB Card Beneficiary Test",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  } ]
+}

@@ -1,0 +1,52 @@
+{
+  "uid" : "966f50f2e9e13810",
+  "name" : "1. Successful Forgot Password Test",
+  "historyId" : "626a17d1d08d064578cedc05ab206e1f",
+  "time" : {
+    "start" : 1725886744057,
+    "stop" : 1725886744065,
+    "duration" : 8
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.forgot-password.forgot-password.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-35"
+  }, {
+    "name" : "suite",
+    "value" : "Forgot Password Test"
+  }, {
+    "name" : "feature",
+    "value" : "Forgot Password Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "966f50f2e9e13810.json",
+  "parameterValues" : [ "619caaeb" ]
+}

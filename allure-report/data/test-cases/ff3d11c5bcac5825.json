@@ -1,0 +1,76 @@
+{
+  "uid" : "ff3d11c5bcac5825",
+  "name" : "1. Verify BEFTN beneficiary management screen navigation",
+  "historyId" : "0a19d297bbaf5bd08f16e4c3d595e2fa",
+  "time" : {
+    "start" : 1725885745405,
+    "stop" : 1725885788941,
+    "duration" : 43536
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-beftn-card.beneficiary-beftn-card.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-9"
+  }, {
+    "name" : "suite",
+    "value" : "BEFTN Card Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "BEFTN Card Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "da3f39d31c5e59a4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725884437226,
+        "stop" : 1725884478452,
+        "duration" : 41226
+      }
+    }, {
+      "uid" : "52c3ddb972c95a6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725883777901,
+        "stop" : 1725883821865,
+        "duration" : 43964
+      }
+    }, {
+      "uid" : "630f57b8b464407c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725883023939,
+        "stop" : 1725883064115,
+        "duration" : 40176
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ff3d11c5bcac5825.json",
+  "parameterValues" : [ "619caaeb" ]
+}

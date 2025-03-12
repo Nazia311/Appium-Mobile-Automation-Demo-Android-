@@ -1,0 +1,50 @@
+{
+  "uid" : "378190d6195a07fa",
+  "name" : "2. Verify successful Agrani Map Test",
+  "historyId" : "435d28b73c87531d7b12fae193836fff",
+  "time" : {
+    "start" : 1725882838787,
+    "stop" : 1725882850345,
+    "duration" : 11558
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.agrani-map.agrani-map.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-5"
+  }, {
+    "name" : "suite",
+    "value" : "Agrani Map Test"
+  }, {
+    "name" : "feature",
+    "value" : "Agrani Map Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "378190d6195a07fa.json",
+  "parameterValues" : [ "619caaeb" ]
+}

@@ -1,0 +1,60 @@
+{
+  "uid" : "4fde86c44a3c69da",
+  "name" : "2. Verify sucessfull Customer Profile Test",
+  "historyId" : "5b8c78a4d4911ea1a2456cfa7e421fd5",
+  "time" : {
+    "start" : 1725886456751,
+    "stop" : 1725886462208,
+    "duration" : 5457
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.customer-profile.customer-profile.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-25"
+  }, {
+    "name" : "suite",
+    "value" : "Customer Profile Test"
+  }, {
+    "name" : "feature",
+    "value" : "Customer Profile Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e5cbdb5c8b2b494c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725885165004,
+        "stop" : 1725885170732,
+        "duration" : 5728
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4fde86c44a3c69da.json",
+  "parameterValues" : [ "619caaeb" ]
+}

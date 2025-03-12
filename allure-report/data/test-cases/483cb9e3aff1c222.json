@@ -1,0 +1,50 @@
+{
+  "uid" : "483cb9e3aff1c222",
+  "name" : "2. Verify that user can not add a duplicate npsb card beneficiary from beneficiary management screen ",
+  "historyId" : "15124ee7c5be79c0fe350d12ef128627",
+  "time" : {
+    "start" : 1725884906619,
+    "stop" : 1725884939881,
+    "duration" : 33262
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-npsb-card.beneficiary-npsb-card.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-17"
+  }, {
+    "name" : "suite",
+    "value" : "NPSB Card Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "NPSB Card Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "483cb9e3aff1c222.json",
+  "parameterValues" : [ "619caaeb" ]
+}

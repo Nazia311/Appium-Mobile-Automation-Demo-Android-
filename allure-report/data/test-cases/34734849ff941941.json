@@ -1,0 +1,52 @@
+{
+  "uid" : "34734849ff941941",
+  "name" : "1. Verify unsuccessful FAQ Test",
+  "historyId" : "6a1abe9cef6829110e191c6b61e937f0",
+  "time" : {
+    "start" : 1725886698585,
+    "stop" : 1725886700586,
+    "duration" : 2001
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.faq.faq.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-33"
+  }, {
+    "name" : "suite",
+    "value" : "FAQ Test"
+  }, {
+    "name" : "feature",
+    "value" : "FAQ Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "34734849ff941941.json",
+  "parameterValues" : [ "619caaeb" ]
+}

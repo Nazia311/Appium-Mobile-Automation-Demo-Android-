@@ -1,0 +1,52 @@
+{
+  "uid" : "3da1e8b21ce66031",
+  "name" : "1. Successful Login Test",
+  "historyId" : "2000d430a518656d2f77d7d4f8c7aef2",
+  "time" : {
+    "start" : 1725887445243,
+    "stop" : 1725887445251,
+    "duration" : 8
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.login.login.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-55"
+  }, {
+    "name" : "suite",
+    "value" : "Login Test"
+  }, {
+    "name" : "feature",
+    "value" : "Login Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3da1e8b21ce66031.json",
+  "parameterValues" : [ "619caaeb" ]
+}

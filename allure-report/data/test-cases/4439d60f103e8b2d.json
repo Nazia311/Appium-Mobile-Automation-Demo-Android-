@@ -1,0 +1,52 @@
+{
+  "uid" : "4439d60f103e8b2d",
+  "name" : "2. Verify successful Customer Support Test",
+  "historyId" : "c4cdba3ef53e59112f559f47c84cefc3",
+  "time" : {
+    "start" : 1725885220395,
+    "stop" : 1725885256676,
+    "duration" : 36281
+  },
+  "status" : "broken",
+  "statusMessage" : "Can't call getText on element with selector \"~যে কোন প্রয়োজনে আমাদের হটলাইন নাম্বারে যোগাযোগ করুন অথবা ইমেইল করুনঃ\" because element wasn't found",
+  "statusTrace" : "Error: Can't call getText on element with selector \"~যে কোন প্রয়োজনে আমাদের হটলাইন নাম্বারে যোগাযোগ করুন অথবা ইমেইল করুনঃ\" because element wasn't found\n    at async CustomerSupportPage.customerSupport (/home/tisha/projects/agrani-app-automation/test/specs/customer-support/customer-support.po.js:41:33)\n    at async Context.<anonymous> (/home/tisha/projects/agrani-app-automation/test/specs/customer-support/customer-support.spec.js:14:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.customer-support.customer-support.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-27"
+  }, {
+    "name" : "suite",
+    "value" : "Customer Support Test"
+  }, {
+    "name" : "feature",
+    "value" : "Customer Support Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4439d60f103e8b2d.json",
+  "parameterValues" : [ "619caaeb" ]
+}

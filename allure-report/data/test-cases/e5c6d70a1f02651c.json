@@ -1,0 +1,52 @@
+{
+  "uid" : "e5c6d70a1f02651c",
+  "name" : "2. Verify successful Exchange Rate Test",
+  "historyId" : "c1b2227a141092440095e30a4505032c",
+  "time" : {
+    "start" : 1725886650064,
+    "stop" : 1725886654465,
+    "duration" : 4401
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.exchange-rate.exchange-rate.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-31"
+  }, {
+    "name" : "suite",
+    "value" : "Exchange Rate Test"
+  }, {
+    "name" : "feature",
+    "value" : "Exchange Rate Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e5c6d70a1f02651c.json",
+  "parameterValues" : [ "619caaeb" ]
+}

@@ -1,0 +1,52 @@
+{
+  "uid" : "93183ffac1b06e07",
+  "name" : "1. Verify successful transfer history test",
+  "historyId" : "28aa98ab3d0c5bb30bd60ff643f67509",
+  "time" : {
+    "start" : 1725887728220,
+    "stop" : 1725887735815,
+    "duration" : 7595
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.transfer-history.transfer-history.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-67"
+  }, {
+    "name" : "suite",
+    "value" : "Transfer History Test"
+  }, {
+    "name" : "feature",
+    "value" : "Transfer History Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "93183ffac1b06e07.json",
+  "parameterValues" : [ "619caaeb" ]
+}

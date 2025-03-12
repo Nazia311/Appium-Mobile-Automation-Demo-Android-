@@ -1,0 +1,581 @@
+[ {
+  "uid" : "ef18ac6f1b84f701",
+  "name" : "2. Unsuccessful Nagad Transfer Test",
+  "time" : {
+    "start" : 1725887040749,
+    "stop" : 1725887053206,
+    "duration" : 12457
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e36c71aaf60acd0",
+  "name" : "1. Verify unsuccessfull Interest Rate Test",
+  "time" : {
+    "start" : 1725887334915,
+    "stop" : 1725887338578,
+    "duration" : 3663
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3f4e44510ec78321",
+  "name" : "1. Verify Transfer to Own Account screen  navigation ",
+  "time" : {
+    "start" : 1725887258753,
+    "stop" : 1725887279210,
+    "duration" : 20457
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a9cef1853cbc40a9",
+  "name" : "2. Verify successful Customer Support Test",
+  "time" : {
+    "start" : 1725886505247,
+    "stop" : 1725886540423,
+    "duration" : 35176
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "dc38ed31363a07fc",
+  "name" : "1. Successful fund transfer to other bank card(NPSB) ",
+  "time" : {
+    "start" : 1725887180329,
+    "stop" : 1725887206180,
+    "duration" : 25851
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "34734849ff941941",
+  "name" : "1. Verify unsuccessful FAQ Test",
+  "time" : {
+    "start" : 1725886698585,
+    "stop" : 1725886700586,
+    "duration" : 2001
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3469aeee32d5310",
+  "name" : "1. Successful fund transfer to other bank card(BEFTN)",
+  "time" : {
+    "start" : 1725886864261,
+    "stop" : 1725886886314,
+    "duration" : 22053
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "107db2072f124081",
+  "name" : "1. Verify unsuccessful Exchange Rate Test",
+  "time" : {
+    "start" : 1725886647252,
+    "stop" : 1725886650063,
+    "duration" : 2811
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "80da579061ff7b18",
+  "name" : "1. Verify npsb beneficiary management screen navigation",
+  "time" : {
+    "start" : 1725886039950,
+    "stop" : 1725886083944,
+    "duration" : 43994
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6893e5d89921649a",
+  "name" : "1. Verify intra beneficiary management screen navigation",
+  "time" : {
+    "start" : 1725886277389,
+    "stop" : 1725886283994,
+    "duration" : 6605
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bd3432300f71e50a",
+  "name" : "1. Verify unsuccessful Agrani Map Test",
+  "time" : {
+    "start" : 1725885530598,
+    "stop" : 1725885535651,
+    "duration" : 5053
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9cd97146529fe58a",
+  "name" : "2. Verify successfull Interest Rate Test",
+  "time" : {
+    "start" : 1725887338580,
+    "stop" : 1725887358456,
+    "duration" : 19876
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ff3d11c5bcac5825",
+  "name" : "1. Verify BEFTN beneficiary management screen navigation",
+  "time" : {
+    "start" : 1725885745405,
+    "stop" : 1725885788941,
+    "duration" : 43536
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2c223d6e46210137",
+  "name" : "1. Successful fund transfer to other bank account(BEFTN)",
+  "time" : {
+    "start" : 1725886785297,
+    "stop" : 1725886807131,
+    "duration" : 21834
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cb60a2cb824e90b1",
+  "name" : "1. Verify successful last 25 transaction test",
+  "time" : {
+    "start" : 1725887399226,
+    "stop" : 1725887405564,
+    "duration" : 6338
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "82143c20861a4afe",
+  "name" : "1. Verify unsuccessfull Customer Profile Test",
+  "time" : {
+    "start" : 1725886451968,
+    "stop" : 1725886456750,
+    "duration" : 4782
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ea7f17891e595ed4",
+  "name" : "2. Verify successful Advance Loan Calculator Test",
+  "time" : {
+    "start" : 1725885410317,
+    "stop" : 1725885429192,
+    "duration" : 18875
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4c22f8faba7f91a6",
+  "name" : "1. Verify unsuccessful Advance Loan Calculator Test",
+  "time" : {
+    "start" : 1725885403394,
+    "stop" : 1725885410316,
+    "duration" : 6922
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f2bf907513d69869",
+  "name" : "1. Successful Call Support Test",
+  "time" : {
+    "start" : 1725886325560,
+    "stop" : 1725886325570,
+    "duration" : 10
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "812c355dc5e711",
+  "name" : "2. Verify that user can not add a duplicate npsb beneficiary from beneficiary management screen ",
+  "time" : {
+    "start" : 1725886083945,
+    "stop" : 1725886127037,
+    "duration" : 43092
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "564ba9b9253a493a",
+  "name" : "2. Verify unsuccessful FAQ Test",
+  "time" : {
+    "start" : 1725886700587,
+    "stop" : 1725886703919,
+    "duration" : 3332
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "57af731e57f5691d",
+  "name" : "2. Unsuccessful Mobile Recharge Test",
+  "time" : {
+    "start" : 1725887573925,
+    "stop" : 1725887585959,
+    "duration" : 12034
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cf7032ee667b385b",
+  "name" : "2. Verify successful Agrani Map Test",
+  "time" : {
+    "start" : 1725885535652,
+    "stop" : 1725885577840,
+    "duration" : 42188
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "525f280444b8e5ed",
+  "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+  "time" : {
+    "start" : 1725887279214,
+    "stop" : 1725887293164,
+    "duration" : 13950
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "72876498c62b9615",
+  "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+  "time" : {
+    "start" : 1725887206182,
+    "stop" : 1725887220664,
+    "duration" : 14482
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4cbcdec6d821fb3b",
+  "name" : "1.Verify unsuccessful Change Password Test",
+  "time" : {
+    "start" : 1725886367313,
+    "stop" : 1725886381833,
+    "duration" : 14520
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8c460a8e1eb09428",
+  "name" : "2. Verify that user can not add a duplicate beftn acc beneficiary from beneficiary management screen ",
+  "time" : {
+    "start" : 1725885662328,
+    "stop" : 1725885702288,
+    "duration" : 39960
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4fde86c44a3c69da",
+  "name" : "2. Verify sucessfull Customer Profile Test",
+  "time" : {
+    "start" : 1725886456751,
+    "stop" : 1725886462208,
+    "duration" : 5457
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "95a2889993b5bcbf",
+  "name" : "2. Verify successful News Events Test",
+  "time" : {
+    "start" : 1725887632033,
+    "stop" : 1725887634630,
+    "duration" : 2597
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8eb2ef73a017844f",
+  "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+  "time" : {
+    "start" : 1725886886315,
+    "stop" : 1725886899155,
+    "duration" : 12840
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fcaba1277c796b66",
+  "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+  "time" : {
+    "start" : 1725886807133,
+    "stop" : 1725886821470,
+    "duration" : 14337
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "59301634ae6a3465",
+  "name" : "2. Verify that user can not add a duplicate npsb card beneficiary from beneficiary management screen ",
+  "time" : {
+    "start" : 1725886200936,
+    "stop" : 1725886234603,
+    "duration" : 33667
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "341bc6535977cc55",
+  "name" : "1. Verify beftn beneficiary management screen navigation",
+  "time" : {
+    "start" : 1725885621396,
+    "stop" : 1725885662327,
+    "duration" : 40931
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3da1e8b21ce66031",
+  "name" : "1. Successful Login Test",
+  "time" : {
+    "start" : 1725887445243,
+    "stop" : 1725887445251,
+    "duration" : 8
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "966f50f2e9e13810",
+  "name" : "1. Successful Forgot Password Test",
+  "time" : {
+    "start" : 1725886744057,
+    "stop" : 1725886744065,
+    "duration" : 8
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "57ecd5938ab63c13",
+  "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+  "time" : {
+    "start" : 1725886964671,
+    "stop" : 1725886978020,
+    "duration" : 13349
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "525436cfd86032d1",
+  "name" : "1. Successful Logout Test",
+  "time" : {
+    "start" : 1725887486550,
+    "stop" : 1725887486559,
+    "duration" : 9
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4881c061aecb29b6",
+  "name" : "2. Verify successful Agrani Location Test",
+  "time" : {
+    "start" : 1725885472129,
+    "stop" : 1725885490132,
+    "duration" : 18003
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9677d4365e839d5f",
+  "name" : "1. Successful Mobile Recharge Test",
+  "time" : {
+    "start" : 1725887530009,
+    "stop" : 1725887573923,
+    "duration" : 43914
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "93183ffac1b06e07",
+  "name" : "1. Verify successful transfer history test",
+  "time" : {
+    "start" : 1725887728220,
+    "stop" : 1725887735815,
+    "duration" : 7595
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "630bfad9d51368aa",
+  "name" : "2. Verify that user can not add a duplicate intra beneficiary from beneficiary management screen ",
+  "time" : {
+    "start" : 1725885901314,
+    "stop" : 1725885926446,
+    "duration" : 25132
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8da23a902c7c3410",
+  "name" : "1. Verify Transfer to Own Account screen navigation ",
+  "time" : {
+    "start" : 1725886940765,
+    "stop" : 1725886964667,
+    "duration" : 23902
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e7001d935d60bb45",
+  "name" : "2. Unsuccessful fund transfer due to amount exceeding current balance",
+  "time" : {
+    "start" : 1725887122946,
+    "stop" : 1725887135848,
+    "duration" : 12902
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f15d60801380ac87",
+  "name" : "1. Verify unsuccessful Customer Support Test",
+  "time" : {
+    "start" : 1725886501208,
+    "stop" : 1725886505244,
+    "duration" : 4036
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a0b9293490aef313",
+  "name" : "1. Successful fund transfer to other bank account(NPSB)",
+  "time" : {
+    "start" : 1725887094491,
+    "stop" : 1725887122940,
+    "duration" : 28449
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d15f4b7379a2534b",
+  "name" : "1. Verify unsuccessful EMI Calculator Test",
+  "time" : {
+    "start" : 1725886585448,
+    "stop" : 1725886592649,
+    "duration" : 7201
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b8d07527de0de01a",
+  "name" : "2. Unsuccessful add nagad beneficiary test for without giving nagad number",
+  "time" : {
+    "start" : 1725885994443,
+    "stop" : 1725886001080,
+    "duration" : 6637
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e1e9ef47e81b4db7",
+  "name" : "1. Verify unsuccessful Agrani Location Test",
+  "time" : {
+    "start" : 1725885469692,
+    "stop" : 1725885472128,
+    "duration" : 2436
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5c6d70a1f02651c",
+  "name" : "2. Verify successful Exchange Rate Test",
+  "time" : {
+    "start" : 1725886650064,
+    "stop" : 1725886654465,
+    "duration" : 4401
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b1e6b847d1fccf0e",
+  "name" : "1. Verify npsb beneficiary management screen navigation",
+  "time" : {
+    "start" : 1725886166766,
+    "stop" : 1725886200935,
+    "duration" : 34169
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "85d630ce3e692474",
+  "name" : "1. Successfully add nagad beneficiary test",
+  "time" : {
+    "start" : 1725885968526,
+    "stop" : 1725885994442,
+    "duration" : 25916
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d424697c31b047bf",
+  "name" : "1. Successful Nagad Transfer Test",
+  "time" : {
+    "start" : 1725887018846,
+    "stop" : 1725887040746,
+    "duration" : 21900
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a11d2c6a13f1ba00",
+  "name" : "2. Verify successful Change Password Test",
+  "time" : {
+    "start" : 1725886381835,
+    "stop" : 1725886398917,
+    "duration" : 17082
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8e1e9ad984c61a44",
+  "name" : "2. Verify successful EMI Calculator Test",
+  "time" : {
+    "start" : 1725886592652,
+    "stop" : 1725886603849,
+    "duration" : 11197
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "50b5a6fc731eb7dd",
+  "name" : "1. Successful See Account Balance Test",
+  "time" : {
+    "start" : 1725887683989,
+    "stop" : 1725887683999,
+    "duration" : 10
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eeba6c7be80a894a",
+  "name" : "1. Verify unsuccessful News Events Test",
+  "time" : {
+    "start" : 1725887626942,
+    "stop" : 1725887632032,
+    "duration" : 5090
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cad4dad6a679c6b0",
+  "name" : "1. Verify intra beneficiary management screen navigation",
+  "time" : {
+    "start" : 1725885871439,
+    "stop" : 1725885901313,
+    "duration" : 29874
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e2faf66ea54c08a5",
+  "name" : "2. Verify that user can not add a duplicate npsb card beneficiary from beneficiary management screen ",
+  "time" : {
+    "start" : 1725885788942,
+    "stop" : 1725885829128,
+    "duration" : 40186
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

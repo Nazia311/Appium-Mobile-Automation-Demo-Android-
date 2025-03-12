@@ -1,0 +1,50 @@
+{
+  "uid" : "c1e685c0c3d1adca",
+  "name" : "2. Verify that user can not add a duplicate beftn acc beneficiary from beneficiary management screen ",
+  "historyId" : "66c34ce3faa3019cbee62b6d2cd37b45",
+  "time" : {
+    "start" : 1725884352753,
+    "stop" : 1725884393256,
+    "duration" : 40503
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-beftn-acc.beneficiary-beftn-acc.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-7"
+  }, {
+    "name" : "suite",
+    "value" : "BEFTN Account Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "BEFTN Account Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c1e685c0c3d1adca.json",
+  "parameterValues" : [ "619caaeb" ]
+}

@@ -1,0 +1,60 @@
+{
+  "uid" : "80da579061ff7b18",
+  "name" : "1. Verify npsb beneficiary management screen navigation",
+  "historyId" : "0adb8ca011f26e4ba4bc0fa98e8c4ca0",
+  "time" : {
+    "start" : 1725886039950,
+    "stop" : 1725886083944,
+    "duration" : 43994
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-npsb-acc.beneficiary-npsb-acc.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-15"
+  }, {
+    "name" : "suite",
+    "value" : "NPSB Account Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "NPSB Account Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2ab199bee6bcfc6e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725884742693,
+        "stop" : 1725884787146,
+        "duration" : 44453
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "80da579061ff7b18.json",
+  "parameterValues" : [ "619caaeb" ]
+}

@@ -1,0 +1,60 @@
+{
+  "uid" : "f15d60801380ac87",
+  "name" : "1. Verify unsuccessful Customer Support Test",
+  "historyId" : "292999ab76b0a8d68daec4df43e840a6",
+  "time" : {
+    "start" : 1725886501208,
+    "stop" : 1725886505244,
+    "duration" : 4036
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.customer-support.customer-support.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-27"
+  }, {
+    "name" : "suite",
+    "value" : "Customer Support Test"
+  }, {
+    "name" : "feature",
+    "value" : "Customer Support Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "fa4b99854ee72293",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725885215866,
+        "stop" : 1725885220394,
+        "duration" : 4528
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f15d60801380ac87.json",
+  "parameterValues" : [ "619caaeb" ]
+}

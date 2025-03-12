@@ -1,0 +1,52 @@
+{
+  "uid" : "70f6c5bb6f7bbb90",
+  "name" : "2. Verify that user can not add a duplicate intra beneficiary from beneficiary management screen ",
+  "historyId" : "4cfaca70d032a8122915145860b870ec",
+  "time" : {
+    "start" : 1725883955592,
+    "stop" : 1725883989469,
+    "duration" : 33877
+  },
+  "status" : "broken",
+  "statusMessage" : "Can't call isEnabled on element with selector \"android=new UiSelector().className(\"android.widget.Button\")\" because element wasn't found",
+  "statusTrace" : "Error: Can't call isEnabled on element with selector \"android=new UiSelector().className(\"android.widget.Button\")\" because element wasn't found\n    at async IntraBeneficiary.AgaintapFloatingbutton (/home/tisha/projects/agrani-app-automation/test/specs/beneficiary-intra/beneficiary-intra.po.js:177:27)\n    at async Context.<anonymous> (/home/tisha/projects/agrani-app-automation/test/specs/beneficiary-intra/beneficiary-intra.spec.js:20:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.beneficiary-intra.beneficiary-intra.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-11"
+  }, {
+    "name" : "suite",
+    "value" : "Intra Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "Intra Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "70f6c5bb6f7bbb90.json",
+  "parameterValues" : [ "619caaeb" ]
+}

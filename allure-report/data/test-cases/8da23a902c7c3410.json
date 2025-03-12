@@ -1,0 +1,52 @@
+{
+  "uid" : "8da23a902c7c3410",
+  "name" : "1. Verify Transfer to Own Account screen navigation ",
+  "historyId" : "4e5e87574c593ce017815f768042ed9b",
+  "time" : {
+    "start" : 1725886940765,
+    "stop" : 1725886964667,
+    "duration" : 23902
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.ft-intra.ft-intra.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-41"
+  }, {
+    "name" : "suite",
+    "value" : "Intra FT Test"
+  }, {
+    "name" : "feature",
+    "value" : "Intra FT Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8da23a902c7c3410.json",
+  "parameterValues" : [ "619caaeb" ]
+}

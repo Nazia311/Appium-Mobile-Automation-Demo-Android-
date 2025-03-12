@@ -1,0 +1,52 @@
+{
+  "uid" : "eeba6c7be80a894a",
+  "name" : "1. Verify unsuccessful News Events Test",
+  "historyId" : "6f858b0e1fb28c9fcc5ec2d3051aa5a0",
+  "time" : {
+    "start" : 1725887626942,
+    "stop" : 1725887632032,
+    "duration" : 5090
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.news-events.news-events.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-61"
+  }, {
+    "name" : "suite",
+    "value" : "News Events Test"
+  }, {
+    "name" : "feature",
+    "value" : "News Events Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "eeba6c7be80a894a.json",
+  "parameterValues" : [ "619caaeb" ]
+}

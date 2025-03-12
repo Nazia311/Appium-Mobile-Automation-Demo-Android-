@@ -1,0 +1,84 @@
+{
+  "uid" : "bd3432300f71e50a",
+  "name" : "1. Verify unsuccessful Agrani Map Test",
+  "historyId" : "d33cf3075f6feb4352d018dcdd302c44",
+  "time" : {
+    "start" : 1725885530598,
+    "stop" : 1725885535651,
+    "duration" : 5053
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.agrani-map.agrani-map.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-5"
+  }, {
+    "name" : "suite",
+    "value" : "Agrani Map Test"
+  }, {
+    "name" : "feature",
+    "value" : "Agrani Map Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c1b9953f70dabc1a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725884213811,
+        "stop" : 1725884218616,
+        "duration" : 4805
+      }
+    }, {
+      "uid" : "c3eca5cf180a2da0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725883533095,
+        "stop" : 1725883538880,
+        "duration" : 5785
+      }
+    }, {
+      "uid" : "e68dfbded476a962",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725882833631,
+        "stop" : 1725882838785,
+        "duration" : 5154
+      }
+    }, {
+      "uid" : "f8b3e3e741ee1833",
+      "status" : "passed",
+      "time" : {
+        "start" : 1725882255570,
+        "stop" : 1725882260490,
+        "duration" : 4920
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bd3432300f71e50a.json",
+  "parameterValues" : [ "619caaeb" ]
+}

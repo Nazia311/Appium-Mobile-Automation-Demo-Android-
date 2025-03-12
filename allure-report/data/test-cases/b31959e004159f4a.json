@@ -1,0 +1,50 @@
+{
+  "uid" : "b31959e004159f4a",
+  "name" : "1. Verify intra beneficiary management screen navigation",
+  "historyId" : "aa930905c3d2000735fecf59a5e087d6",
+  "time" : {
+    "start" : 1725884982179,
+    "stop" : 1725884989410,
+    "duration" : 7231
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : ".home.tisha.projects.agrani-app-automation.test.specs.bkash-beneficiary.bkash-beneficiary.spec.js"
+  }, {
+    "name" : "thread",
+    "value" : "0-19"
+  }, {
+    "name" : "suite",
+    "value" : "bKash Beneficiary Test"
+  }, {
+    "name" : "feature",
+    "value" : "bKash Beneficiary Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "619caaeb"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b31959e004159f4a.json",
+  "parameterValues" : [ "619caaeb" ]
+}
