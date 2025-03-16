@@ -98,23 +98,23 @@ exports.config = {
   },
 
   afterSuite: async function () {
-    console.log("Logging out after suite...");
-    await driver.pause(3000);
-    const doerLogo = await $(
-      'android=new UiSelector().className("android.widget.ImageView").instance(1)'
-    );
-    await doerLogo.click();
-    await driver.pause(1000);
-    const logoutButton = await $("~লগ আউট");
-    await logoutButton.click();
-    await driver.pause(1000);
-    const confirmLogoutButton = await $("~হ্যাঁ");
-    await confirmLogoutButton.click();
+    // console.log("Logging out after suite...");
+    // await driver.pause(3000);
+    // const doerLogo = await $(
+    //   'android=new UiSelector().className("android.widget.ImageView").instance(1)'
+    // );
+    // await doerLogo.click();
+    // await driver.pause(1000);
+    // const logoutButton = await $("~লগ আউট");
+    // await logoutButton.click();
+    // await driver.pause(1000);
+    // const confirmLogoutButton = await $("~হ্যাঁ");
+    // await confirmLogoutButton.click();
 
     console.log("Clearing app data after suite...");
     await new Promise((resolve, reject) => {
       exec(
-        "adb shell pm clear net.celloscope.ib_mobile_app.custom",
+        "adb shell pm clear com.primefocushealth.pfhapp",
         (err, stdout, stderr) => {
           if (err) {
             console.error(`Error clearing app data: ${err.message}`);
@@ -167,7 +167,7 @@ exports.config = {
     console.log("All tests complete. Uninstalling app...");
     await new Promise((resolve, reject) => {
       exec(
-        "adb uninstall net.celloscope.ib_mobile_app.custom",
+        "adb uninstall com.primefocushealth.pfhapp",
         (err, stdout, stderr) => {
           if (err) {
             console.error(`Error uninstalling app: ${err.message}`);
