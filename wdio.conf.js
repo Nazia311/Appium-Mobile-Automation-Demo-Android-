@@ -74,29 +74,46 @@ exports.config = {
 
   before: async function () {
     global.commonData = {};
+    
     // Capture the start time before the test suite begins
     startTime = moment();
     allure.addStep(
       `Test suite started at: ${startTime.format("YYYY-MM-DD HH:mm:ss")}`
     );
-
-    const dataPath = path.join(__dirname, "./test/data/common.json");
+  
+    const dataPath = path.join(__dirname, './test/data/common.json');
+  
     try {
-      global.commonData = JSON.parse(fs.readFileSync(dataPath, "utf8"));
-      console.log("Login data:", global.commonData);
+      // Check if file exists
+      if (!fs.existsSync(dataPath)) {
+        console.error("common.json file not found at path: " + dataPath);
+        throw new Error("common.json file not found");
+      }
+  
+      // Read and parse JSON file
+      global.commonData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+      console.log("Login data loaded:", global.commonData);
+  
     } catch (err) {
       console.error("Error loading Login data:", err);
+      throw new Error("Failed to load Login data.");
     }
-
+  
     await driver.pause(1000);
-    //await LoginPage.openLoginScreen();
-    await LoginPage.login(
-      global.commonData.login.username,
-      global.commonData.login.otppass
-    );
-    console.log("App launched and logged in successfully.");
+    
+    // Log in using the data from common.json
+    try {
+      await LoginPage.login(
+        global.commonData.value.username,
+        global.commonData.value.otppass
+      );
+      console.log("App launched and logged in successfully.");
+    } catch (loginError) {
+      console.error("Login failed:", loginError);
+      throw new Error("Login failed");
+    }
   },
-
+  
   afterSuite: async function () {
     // console.log("Logging out after suite...");
     // await driver.pause(3000);

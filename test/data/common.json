@@ -1,7 +1,7 @@
 {
-    "login2": {
-        "username": "01933449933",
-        "otppass": "5678912"
+    "value": {
+      "username":"01933449933",
+      "otppass": "123456"
     }
-    
-    }
+  }
+  

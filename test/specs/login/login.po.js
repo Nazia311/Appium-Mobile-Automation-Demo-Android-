@@ -1,24 +1,28 @@
 // login.po.js
 class LoginPage {
     async openLoginScreen() {
-        //read the value from the common.json file
-        //const usernum = data.login.username
+       // Wait for 1 second before starting the action
+       await driver.pause(1000);
 
-        await driver.pause(1000);
-        //click on get started
-        const getStarted = await $('~Get Started');
-        await getStarted.click();
-        //enter mobile number
-        const mobileno = await $('android.widget.EditText');
-        await mobileno.click();
-        //const usernum = data.login.username
-        //await mobileno.addValue(usernum);
-        mobileno.addValue('01933449933');
-        await driver.pause(2000);
-        //click on Next button
-        const nextButton = await $('~Next');
-        await nextButton.click();
-        await driver.pause(2000);
+       // Click on the Get Started button
+       const getStarted = await $('~Get Started');
+       await getStarted.click();
+
+       // Enter the mobile number from the common.json file
+       const mobileno = await $('android.widget.EditText');
+       await mobileno.click();
+       
+       // Retrieve username from common.json and enter it into the mobile number field
+       const usernum = global.commonData.value.username;  
+       await mobileno.addValue(usernum);
+
+       // Pause for 2 seconds before clicking Next
+       await driver.pause(2000);
+
+       // Click on the Next button
+       const nextButton = await $('~Next');
+       await nextButton.click();
+       await driver.pause(3000);
     }
 
      
