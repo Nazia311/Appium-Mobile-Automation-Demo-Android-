@@ -115,19 +115,7 @@ exports.config = {
   },
   
   afterSuite: async function () {
-    // console.log("Logging out after suite...");
-    // await driver.pause(3000);
-    // const doerLogo = await $(
-    //   'android=new UiSelector().className("android.widget.ImageView").instance(1)'
-    // );
-    // await doerLogo.click();
-    // await driver.pause(1000);
-    // const logoutButton = await $("~লগ আউট");
-    // await logoutButton.click();
-    // await driver.pause(1000);
-    // const confirmLogoutButton = await $("~হ্যাঁ");
-    // await confirmLogoutButton.click();
-
+    
     console.log("Clearing app data after suite...");
     await new Promise((resolve, reject) => {
       exec(
