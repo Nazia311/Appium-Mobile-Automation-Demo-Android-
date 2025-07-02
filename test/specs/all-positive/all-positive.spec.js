@@ -23,5 +23,17 @@ describe('Auth Test', () => {
         await allPositive.userprofile();
         //verify user profile
         await allPositive.verifyUserProfile();
+        //tap back
+        await allPositive.backnavigation();
+    });
+    it('3. Verify sucessfull navigation to Nutrition screen', async () => {
+        //navigate to Nutrition screen
+        await allPositive.nutritionScreen();
+        //search food
+        await allPositive.searchfood();
+        //dsiplay nutrition
+        await allPositive.showNutrition();
+        //tap back
+        await allPositive.backnavigation();
     });
 });

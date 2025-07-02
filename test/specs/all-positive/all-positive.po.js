@@ -96,13 +96,19 @@ class allPositive {
     async verifyUserProfile() {
         // Verify User Profile screen is displayed
         await driver.pause(3000); // Wait for the user profile screen to load
-        const userProfileScreen = await $('~Name');
+        const userProfileScreen = await $('~Profile');
         const isDisplayed = await userProfileScreen.isDisplayed();
         if (!isDisplayed) {
             throw new Error("User Profile screen is not displayed");
         }
         console.log("User Profile screen is displayed successfully");
+        await driver.pause(2000); // Wait for 2 seconds to observe the screen
+        // tap back
+        const backButton = await $('new UiSelector().description("Back")');
+        await backButton.click();
     }
+
+
     async tapsignout() {
         // Tap on Sign Out button
         const signOutButton = await $('~Sign Out');
@@ -112,6 +118,36 @@ class allPositive {
         await driver.pause(4000); // Wait for the dialog to appear
         const signOutDialog = await $('~Yes');
         await signOutDialog.click()
+    }
+    async nutritionScreen() {
+        // Navigate to Nutrition screen
+        const nutritionButton = await $('~Nutrition\nTab 3 of 4');
+        await nutritionButton.click();
+        await driver.pause(3000); // Wait for the Nutrition screen to load
+    }
+    async searchfood() {
+        // Search for food item
+        const searchInput = await $('//android.widget.ScrollView/android.view.View[2]');
+        await searchInput.click();
+        await driver.pause(3000)
+        const searchInputField = await $('//android.widget.EditText');
+        // Retrieve username from common.json and enter it into the mobile number field
+       const food = global.commonData.value.food;  
+       await searchInputField.addValue(food);
+       
+    }
+    async showNutrition() {
+        // Display Nutrition information
+        await driver.pause(2000); 
+        const nutritionItem = await $('~THAI JASMINE RICE\n160 kcal,  (45g)'); 
+        await nutritionItem.click();
+        await driver.pause(3000); 
+    }
+    async backnavigation() {
+        // Navigate back to the previous screen
+         const backButton = await $('~Back');
+         await backButton.click();
+        await driver.pause(2000); 
     }
 }
 
