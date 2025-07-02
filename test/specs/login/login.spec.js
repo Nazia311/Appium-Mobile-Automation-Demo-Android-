@@ -1,10 +1,10 @@
 const { expect } = require('@wdio/globals');
-const LoginPage = require('./login.po');
+const loginPage = require('./login.po');
 
 describe('Login Test', () => {
     it('1. Verify successful user authentication', async () => {
         //Enter phone number
-        await LoginPage.openLoginScreen();
+        await loginPage.openLoginScreen();
         
     });
 });
