@@ -89,7 +89,7 @@ class allPositive {
      //tap on user profile icon
      await driver.pause(3000); 
      // Wait for the home screen to load
-        const userProfileIcon = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ImageView[2]');
+        const userProfileIcon = await $('//android.widget.ScrollView/android.widget.ImageView[2]');
         await userProfileIcon.click();
         await driver.pause(3000); // Wait for the user profile screen to load
     }

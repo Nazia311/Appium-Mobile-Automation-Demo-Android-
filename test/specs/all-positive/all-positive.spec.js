@@ -25,6 +25,7 @@ describe('Auth Test', () => {
         await allPositive.verifyUserProfile();
         //tap back
         await allPositive.backnavigation();
+        
     });
     it('3. Verify sucessfull navigation to Nutrition screen', async () => {
         //navigate to Nutrition screen
