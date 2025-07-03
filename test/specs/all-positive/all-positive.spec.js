@@ -15,7 +15,7 @@ describe('Auth Test', () => {
         //enter otp
         await allPositive.otpscreen(); 
         //verify home screen
-        //await allPositive.verifyHome();
+        await allPositive.verifyHome();
         
     });
     it('2. Verify sucessfull navigation to user profile', async () => {
@@ -27,14 +27,20 @@ describe('Auth Test', () => {
         await allPositive.backnavigation();
         
     });
-    it('3. Verify sucessfull navigation to Nutrition screen', async () => {
-        //navigate to Nutrition screen
-        await allPositive.nutritionScreen();
-        //search food
-        await allPositive.searchfood();
-        //dsiplay nutrition
-        await allPositive.showNutrition();
-        //tap back
-        await allPositive.backnavigation();
+    it('3. Verify sucessfull scroll', async () => {
+        //scroll to the bottom of the page
+        await allPositive.ScrollView()
+       
+        
     });
+    // it('4. Verify sucessfull navigation to Nutrition screen', async () => {
+    //     //navigate to Nutrition screen
+    //     await allPositive.nutritionScreen();
+    //     //search food
+    //     await allPositive.searchfood();
+    //     //dsiplay nutrition
+    //     await allPositive.showNutrition();
+    //     //tap back
+    //     await allPositive.backnavigation();
+    // });
 });

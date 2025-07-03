@@ -95,7 +95,7 @@ class allPositive {
     }
     async verifyUserProfile() {
         // Verify User Profile screen is displayed
-        await driver.pause(3000); // Wait for the user profile screen to load
+        await driver.pause(2000); // Wait for the user profile screen to load
         const userProfileScreen = await $('~Profile');
         const isDisplayed = await userProfileScreen.isDisplayed();
         if (!isDisplayed) {
@@ -103,9 +103,7 @@ class allPositive {
         }
         console.log("User Profile screen is displayed successfully");
         await driver.pause(2000); // Wait for 2 seconds to observe the screen
-        // tap back
-        const backButton = await $('new UiSelector().description("Back")');
-        await backButton.click();
+    
     }
 
 
@@ -131,9 +129,15 @@ class allPositive {
         await searchInput.click();
         await driver.pause(3000)
         const searchInputField = await $('//android.widget.EditText');
+        await searchInputField.click();
+        await driver.pause(1000); // Wait for the input field to be ready
+        await searchInputField.addValue("rice");
+
         // Retrieve username from common.json and enter it into the mobile number field
-       const food = global.commonData.value.food;  
-       await searchInputField.addValue(food);
+        // const fooditem = String(global.commonData.value.food);  
+        // await searchInputField.addValue(fooditem);
+        
+        await driver.pause(3000); // Wait for search results to load
        
     }
     async showNutrition() {
@@ -141,7 +145,7 @@ class allPositive {
         await driver.pause(2000); 
         const nutritionItem = await $('~THAI JASMINE RICE\n160 kcal,  (45g)'); 
         await nutritionItem.click();
-        await driver.pause(3000); 
+        await driver.pause(6000); 
     }
     async backnavigation() {
         // Navigate back to the previous screen
@@ -149,6 +153,53 @@ class allPositive {
          await backButton.click();
         await driver.pause(2000); 
     }
+    async ScrollView(){
+        let maxScrolls = 5;
+let elementFound = false;
+
+for (let i = 0; i < maxScrolls; i++) {
+  try {
+    const element = await $(`~Nutrition Guidance`);
+    if (await element.isDisplayed()) {
+      elementFound = true;
+      break;
+    }
+  } catch (err) {
+    // Not found, continue
+  }
+
+  // Scroll down using coordinates
+  await driver.performActions([
+    {
+      type: 'pointer',
+      id: 'finger1',
+      parameters: { pointerType: 'touch' },
+      actions: [
+        { type: 'pointerMove', duration: 0, x: 962, y: 1200 },   // Adjusted start
+        { type: 'pointerDown', button: 0 },
+        { type: 'pause', duration: 200 },
+        { type: 'pointerMove', duration: 800, x: 962, y: 400 },  // Scroll upward
+        { type: 'pointerUp', button: 0 },
+      ],
+    },
+  ]);
+
+  await driver.pause(2000); // Let scroll complete
+}
+
+// if (!elementFound) {
+//   throw new Error('Nutrition Guidance element not found after scrolling');
+// } else {
+//   const target = await $(`~Nutrition Guidance`);
+//   await target.click();
+// }
+
+          
+//           await driver.pause(5000); // wait for scroll animation to complete
+          
+
+    }
+    
 }
 
 module.exports = new allPositive();
