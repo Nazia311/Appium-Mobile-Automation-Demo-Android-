@@ -46,14 +46,27 @@ describe('Auth Test', () => {
         
         
     });
-    it('6. Verify sucessfull navigation to My Health screen', async () => {
+    it('6. Verify sucessfull watch Health education video', async () => {
+        //navigate to Health education video screen
+        await allPositive.navigateHealth();
+        //play video
+        await allPositive.watchvideo();
+        //tap back
+        await allPositive.backnavigation();
+        //scroll to the top of the page
+        await allPositive.ScrollViewUp();
+        
+
+
+    })
+    it('7. Verify sucessfull navigation to My Health screen', async () => {
         //navigate to Health screen
         await allPositive.healthScreen();
         //tap back
         await allPositive.home()
         
     });
-    it('7. Verify sucessfull navigation to Nutrition screen', async () => {
+    it('8. Verify sucessfull navigation to Nutrition screen', async () => {
         //navigate to Nutrition screen
         await allPositive.nutritionScreen();
         //search food
@@ -65,7 +78,7 @@ describe('Auth Test', () => {
         //tap back again
         await allPositive.backnavigation2();
     });
-    it('8. Verify sucessfull navigation to Journal screen', async () => {
+    it('9. Verify sucessfull navigation to Journal screen', async () => {
         //navigate to Journal screen
         await allPositive.journalscreen();
         //verify journal screen
@@ -73,22 +86,29 @@ describe('Auth Test', () => {
 
         
     });
-    it('9. Verify sucessfull Journal submission', async () => {
+    it('10. Verify sucessfull Journal submission', async () => {
         // enter journal text
         await allPositive.enterjournal();
         // navigate back home
         await allPositive.home();
         
     });
+    it('11. Verify sucessfull navigation to Notification screen', async () => {
+       // navigate to Notification screen
+        await allPositive.notification()
+        // verify notification screen
+        await allPositive.verifyNotificationScreen();
+        //tap back
+        await allPositive.backnavigation();
 
-    it('10. Verify sucessfull signout from the app ', async () => {
+    });
+
+    it('12. Verify sucessfull signout from the app ', async () => {
         //navigate to user profile
         await allPositive.userprofile();
         //tap on sign out
         await allPositive.tapsignout()
       
     })
-    
-
-
+   
 });

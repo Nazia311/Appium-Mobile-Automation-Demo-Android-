@@ -342,7 +342,87 @@ class allPositive {
         await homeButton.click();
         await driver.pause(3000); // Wait for the Home screen to load
     }
-             
-}
+    async notification(){
+        //navigate to notification
+        await driver.pause(1000);
+        const notificationButton = await $('android=new UiSelector().className("android.widget.ImageView").instance(2)');
+        await notificationButton.click();
+        await driver.pause(2000); 
+    }  
+    async verifyNotificationScreen() {
+        // Verify Notification screen is displayed
+        const notificationScreen = await $('~Notifications');
+        const isDisplayed = await notificationScreen.isDisplayed();
+        if (!isDisplayed) {
+            throw new Error("Notification screen is not displayed");
+        }
+        console.log("Notification screen is displayed successfully");
+        await driver.pause(2000); // Wait for 2 seconds to observe the screen
+    }  
+
+
+
+   async navigateHealth(){
+        let maxScrolls = 5;
+        let elementFound = false;
+    
+        for (let i = 0; i < maxScrolls; i++) {
+            try {
+                const element = await $(`~Health Education`);
+                if (await element.isDisplayed()) {
+                    elementFound = true;
+                    break;
+                }
+            } catch (err) {
+                // Not found, continue scrolling
+            }
+    
+            // Scroll down using coordinates
+            await driver.performActions([
+                {
+                    type: 'pointer',
+                    id: 'finger1',
+                    parameters: { pointerType: 'touch' },
+                    actions: [
+                        { type: 'pointerMove', duration: 0, x: 962, y: 1200 },  // Start position
+                        { type: 'pointerDown', button: 0 },
+                        { type: 'pause', duration: 200 },
+                        { type: 'pointerMove', duration: 800, x: 962, y: 400 },  // End position (scroll up)
+                        { type: 'pointerUp', button: 0 },
+                    ],
+                },
+            ]);
+    
+            await driver.pause(2000); // Let scroll animation complete
+        }
+    
+        if (!elementFound) {
+            throw new Error('Health Education element not found after scrolling');
+        } else {
+            const target = await $(`~Health Education`);
+            await target.click();
+            await driver.pause(3000); 
+    
+            // Add any next steps below if you want to click inside Health Education
+            // e.g., click on a specific article
+        }
+    
+        await driver.pause(3000); // Final wait
+    }
+    async watchvideo(){
+        // Wait for the home screen to load
+        await driver.pause(2000); 
+        // Navigate to Health screen
+        const video = await $('~Healthy Living: Exercise Tips\nVideo\n1 min');
+        await video.click();
+        await driver.pause(9000); 
+        // Navigate back
+        const navigateback = await $('~Back');
+        await navigateback.click();
+        await driver.pause(2000); 
+    }
+
+   }
+
 
 module.exports = new allPositive();
