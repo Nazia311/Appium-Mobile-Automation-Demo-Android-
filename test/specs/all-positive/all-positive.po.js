@@ -28,10 +28,10 @@ class allPositive {
         // Select the first input field
         const otpInput = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]');
         await otpInput.click();
-        await otpInput.addValue(otpCode);  // Enter entire OTP at once
-
-        await driver.pause(3000);  // Optional pause to wait for verification
-
+        // Enter entire OTP at once
+        await otpInput.addValue(otpCode);  
+        // Optional pause to wait for verification
+        await driver.pause(3000);  
     }
     async homescreen() {
         // Wait for 1 second before starting the action
@@ -52,7 +52,6 @@ class allPositive {
        await nextButton.click();
        await driver.pause(3000);
 
-       //Enter OTP 
       
 
         
@@ -171,8 +170,8 @@ class allPositive {
             ],
             },
         ]);
-
-        await driver.pause(2000); // Let scroll complete
+         // Let scroll complete
+        await driver.pause(2000);
         }
 
         if (!elementFound) {
