@@ -1,7 +1,9 @@
 {
     "value": {
       "username":"01933449933",
-      "otppass": "123456"
+      "otppass": "123456",
+      "food": "rice",
+      "weight": "52"
     }
   }
   

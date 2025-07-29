@@ -60,8 +60,8 @@ describe('Auth Test', () => {
         
         
     });
-    it('8. Verify sucessfull Record weight task or GAD7 submission', async () => {
-        //navigate to fourth task
+    it('8. Verify sucessfull Record weight task or PHQ9/GAD7 submission', async () => {
+        //submit fourth task
         await allPositive.fourthtask();
         
     
