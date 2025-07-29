@@ -420,6 +420,153 @@ class allPositive {
         await navigateback.click();
         await driver.pause(2000); 
     }
+    async vitalscan(){
+        //click vital scan submission
+        await driver.pause(2000);
+        const vitalScanButton = await $('~Capture Vitals');
+        await vitalScanButton.click();
+        await driver.pause(3000); 
+        // read the instructions
+        await driver.pause(1000);
+        // tap next button
+        const nextButton = await $('~Next');
+        await nextButton.click();
+        await driver.pause(2000);
+        // allow camera permission
+        const allowButton = await $('~com.android.permissioncontroller:id/permission_allow_one_time_button');
+        await allowButton.click();
+        await driver.pause(5000);
+        //click start scanning
+        const startScanButton = await $('~Start Scanning');
+        // After clicking "Start Scanning"
+        await startScanButton.click();
+
+        // Wait for the result dynamically
+        const scanResultSelector = await $('~Scan Results'); 
+
+        await scanResultSelector.waitForDisplayed({
+            timeout: 80000, // wait up to 60 seconds for scan to complete
+            timeoutMsg: 'Scan Results screen did not appear within expected time'
+        });
+
+        // Optionally, confirm each vital result is shown
+        const heartRate = await $('~Heart Rate');
+        const bloodPressure = await $('~Blood Pressure');
+        const respiratoryRate = await $('~Respiratory Rate');
+
+        await heartRate.waitForDisplayed();
+        await bloodPressure.waitForDisplayed();
+        await respiratoryRate.waitForDisplayed();
+
+        // Now tap "Done"
+        await driver.pause(2000); 
+        const doneButton = await $('~Done');
+        await doneButton.click();
+
+
+
+    }
+    async confirmvitalssubmission(){
+        // Now check the status of the "Capture Vitals" button
+        const captureVitalsButton = await $('~Capture Vitals');
+
+        // Option 1: Check if the button is disabled
+        const isEnabled = await captureVitalsButton.isEnabled();
+        if (!isEnabled) {
+            console.log('Capture Vitals button is disabled after completion');
+        } else {
+            console.warn('!!!!Capture Vitals button is still enabled — test failed!!!!');
+        }
+
+    }
+
+    async explorehealth(){
+        //tap explore health
+        const exploreHealthButton = await $('~Explore Health');
+        await exploreHealthButton.click();
+        await driver.pause(2000); 
+        //tap content
+        const contentButton = await $('~Diabetes and Cardiovascular Disease Prevention\nVideo\n4 min');
+        await contentButton.click();
+        await driver.pause(8000);
+        //tap back
+        const backButton = await $('~Back');
+        await backButton.click();
+        await driver.pause(2000);
+        await backButton.click();
+
+    }
+    async verifyExploreHealth() {
+        // Verify Explore Health screen is displayed
+        const exploreHealthScreen = await $('~Explore Health');
+        const isDisplayed = await exploreHealthScreen.isDisplayed();
+        if (!isDisplayed) {
+            throw new Error("Explore Health screen is not displayed");
+        }
+        console.log("Explore Health screen is displayed successfully");
+        await driver.pause(2000); 
+    }
+    async fourthtask() {
+        // Step 1: Get the in-app date
+        const dateElement = await $('android=new UiSelector().descriptionContains("2025")');
+        const dateText = await dateElement.getAttribute("contentDescription"); // e.g., "Monday, July 29th, 2025"
+        const dayOfWeek = dateText.split(',')[0].trim();
+    
+        console.log(`📆 Detected Day: ${dayOfWeek}`);
+    
+        // Step 2: Conditional logic based on the day
+        if (dayOfWeek === 'Monday') {
+            // === Monday → Record Weight ===
+            console.log('🚀 Executing Record Weight task');
+    
+            const recordWeightButton = await $('~Record Weight');
+            await recordWeightButton.click();
+            await driver.pause(2000);
+    
+            const kgButton = await $('~Kilograms');
+            await kgButton.click();
+            await driver.pause(2000);
+    
+            const weightInput = await $('android.widget.EditText');
+            const weightvalue = global.commonData.value.weight;
+            await weightInput.addValue(weightvalue);
+            await driver.pause(2000);
+    
+            const doneButton = await $('~Done');
+            await doneButton.click();
+            await driver.pause(2000);
+    
+        } else {
+            // === Any other day (e.g., Thursday) → GAD-7 or PHQ9 ===
+            console.log('🚀 Looking for GAD-7 or PHQ9 task');
+    
+            let handled = false;
+    
+            try {
+                const gad7Button = await $('~Begin GAD-7');
+                if (await gad7Button.isDisplayed()) {
+                    await gad7Button.click();
+                    console.log('✅ GAD-7 task started');
+                    handled = true;
+                }
+            } catch (e) {
+                console.log('⚠️ GAD-7 not found');
+            }
+    
+            if (!handled) {
+                try {
+                    const phq9Button = await $('~Begin PHQ9');
+                    if (await phq9Button.isDisplayed()) {
+                        await phq9Button.click();
+                        console.log('✅ PHQ9 task started');
+                    }
+                } catch (e) {
+                    console.log('⚠️ PHQ9 not found');
+                }
+            }
+        }
+    }
+    
 
    }
 
