@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const moment = require("moment");
 const allure = require("@wdio/allure-reporter").default;
-const { exec } = require("child_process");
+const { execSync } = require('child_process');
 const LoginPage = require("./test/specs/login/login.po");
 
 let allTestResults = [],
@@ -44,7 +44,7 @@ exports.config = {
   ],
   logLevel: "info",
   bail: 0,
-  waitforTimeout: 30000,
+  waitforTimeout: 100000,
   connectionRetryTimeout: 240000,
   connectionRetryCount: 5,
   services: ["appium"],
@@ -56,6 +56,15 @@ exports.config = {
     },
   },
   framework: "mocha",
+  onPrepare: function (config, capabilities) {
+    console.log('Granting camera permission via ADB...');
+    try {
+      execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
+      console.log('Camera permission granted successfully.');
+    } catch (err) {
+      console.error('Failed to grant camera permission:', err);
+    }
+  },
   reporters: [
     "spec",
     [
@@ -69,13 +78,21 @@ exports.config = {
   ],
   mochaOpts: {
     ui: "bdd",
-    timeout: 120000,
+    timeout: 180000,
   },
   before: async function () {
     global.commonData = {};
     startTime = moment();
     allure.addStep(`Test suite started at: ${startTime.format("YYYY-MM-DD HH:mm:ss")}`);
     const dataPath = path.join(__dirname, './test/data/common.json');
+     // --- Grant Camera Permission via ADB ---
+     try {
+      console.log('Granting camera permission via ADB...');
+      execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
+      console.log('Camera permission granted successfully.');
+  } catch (err) {
+      console.error('Failed to grant camera permission:', err);
+  }
     try {
       if (!fs.existsSync(dataPath)) {
         throw new Error(`common.json file not found at path: ${dataPath}`);

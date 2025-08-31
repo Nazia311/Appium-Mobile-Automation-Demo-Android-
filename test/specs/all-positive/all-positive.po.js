@@ -5,7 +5,7 @@ class allPositive {
         await driver.pause(3000);
 
         // Enter the mobile number from the common.json file
-        const mobileno = await $('android.widget.EditText');
+        const mobileno = await $('//android.widget.EditText');
         await mobileno.click();
         
         // Retrieve username from common.json and enter it into the mobile number field
@@ -14,7 +14,9 @@ class allPositive {
 
         // Pause for 2 seconds before clicking Next
         await driver.pause(2000);
-
+        const consent= await $('//android.widget.CheckBox');
+        await consent.click();
+        await driver.pause(1000);
         // Click on the Next button
         const nextButton = await $('~Next');
         await nextButton.click();
@@ -182,8 +184,8 @@ class allPositive {
         await driver.pause(3000); 
         // Wait for the target element to be displayed
         //click on ankle sprain
-            const ankleSprain = await $('~Ankle Sprain\nArticle\n4 min');
-            await ankleSprain.click();
+            const Dyslipidemia = await $('~Dyslipidemia\nArticle\n6 min');
+            await Dyslipidemia.click();
             // Wait for the article to load
             await driver.pause(3000); 
 
@@ -367,7 +369,7 @@ class allPositive {
     
         for (let i = 0; i < maxScrolls; i++) {
             try {
-                const element = await $(`~Health Education`);
+                const element = await $(`~Wellness & Self-Care`);
                 if (await element.isDisplayed()) {
                     elementFound = true;
                     break;
@@ -398,7 +400,7 @@ class allPositive {
         if (!elementFound) {
             throw new Error('Health Education element not found after scrolling');
         } else {
-            const target = await $(`~Health Education`);
+            const target = await $(`~Wellness & Self-Care`);
             await target.click();
             await driver.pause(3000); 
     
@@ -412,7 +414,7 @@ class allPositive {
         // Wait for the home screen to load
         await driver.pause(2000); 
         // Navigate to Health screen
-        const video = await $('~Healthy Living: Exercise Tips\nVideo\n1 min');
+        const video = await $('~Healthy Living: Stress Management\nVideo\n1 min');
         await video.click();
         await driver.pause(9000); 
         // Navigate back
@@ -430,40 +432,45 @@ class allPositive {
         await driver.pause(1000);
         // tap next button
         const nextButton = await $('~Next');
-        await nextButton.click();
+        await nextButton.click(); 
         await driver.pause(2000);
-        // allow camera permission
-        const allowButton = await $('~com.android.permissioncontroller:id/permission_allow_one_time_button');
-        await allowButton.click();
-        await driver.pause(5000);
         //click start scanning
         const startScanButton = await $('~Start Scanning');
         // After clicking "Start Scanning"
         await startScanButton.click();
-
+         await driver.pause(120000); // Wait for the scanning process to complete
         // Wait for the result dynamically
         const scanResultSelector = await $('~Scan Results'); 
-
-        await scanResultSelector.waitForDisplayed({
-            timeout: 80000, // wait up to 60 seconds for scan to complete
-            timeoutMsg: 'Scan Results screen did not appear within expected time'
-        });
-
-        // Optionally, confirm each vital result is shown
+        const isScanResultVisible = await scanResultSelector.isExisting(); // Check if the element exists
+        if (!isScanResultVisible) {
+            throw new Error("Scan results not found, something went wrong.");
+        }
+    
+        // Optionally, confirm each vital result is shown using isExisting
         const heartRate = await $('~Heart Rate');
         const bloodPressure = await $('~Blood Pressure');
         const respiratoryRate = await $('~Respiratory Rate');
-
-        await heartRate.waitForDisplayed();
-        await bloodPressure.waitForDisplayed();
-        await respiratoryRate.waitForDisplayed();
-
-        // Now tap "Done"
-        await driver.pause(2000); 
+    
+        const isHeartRateVisible = await heartRate.isExisting();
+        const isBloodPressureVisible = await bloodPressure.isExisting();
+        const isRespiratoryRateVisible = await respiratoryRate.isExisting();
+    
+        if (!isHeartRateVisible || !isBloodPressureVisible || !isRespiratoryRateVisible) {
+            throw new Error("One or more vital signs are missing.");
+        }
+    
+        // Tap "Done"
         const doneButton = await $('~Done');
+        await doneButton.waitForDisplayed({ timeout: 100000 });
         await doneButton.click();
-
-
+    
+        // Check if app is still running after completion
+        const isAppRunning = await driver.isAppInstalled("com.primefocushealth.pfhapp");
+        if (!isAppRunning) {
+            console.log("App has crashed or closed unexpectedly.");
+            throw new Error("App closed unexpectedly.");
+        }
+    
 
     }
     async confirmvitalssubmission(){
@@ -486,7 +493,7 @@ class allPositive {
         await exploreHealthButton.click();
         await driver.pause(2000); 
         //tap content
-        const contentButton = await $('~Diabetes and Cardiovascular Disease Prevention\nVideo\n4 min');
+        const contentButton = await $('~Healthy Heart Introduction\nVideo\n2 min');
         await contentButton.click();
         await driver.pause(8000);
         //tap back

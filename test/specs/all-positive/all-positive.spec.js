@@ -37,7 +37,7 @@ describe('Auth Test', () => {
     })
     it('5. Verify sucessfull task Capture Vital submission', async () => {
         //navigate to Capture Vital screen
-        await allPositive.captureVital();
+        await allPositive.vitalscan();
         //verify submission
         await allPositive.confirmvitalssubmission()
 
@@ -60,7 +60,7 @@ describe('Auth Test', () => {
         
         
     });
-    it('8. Verify sucessfull Record weight task or PHQ9/GAD7 submission', async () => {
+    it('8. Verify sucessful Record weight task or PHQ9/GAD7 submission', async () => {
         //submit fourth task
         await allPositive.fourthtask();
         
@@ -68,7 +68,7 @@ describe('Auth Test', () => {
     })
 
 
-//     it('6. Verify sucessfull watch Health education video', async () => {
+//     it('6. Verify sucessfull visit Wellness and Selfcare ', async () => {
 //         //navigate to Health education video screen
 //         await allPositive.navigateHealth();
 //         //play video
