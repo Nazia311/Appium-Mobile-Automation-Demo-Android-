@@ -621,6 +621,7 @@ class allPositive {
         console.log("Explore Health screen is displayed successfully");
         await driver.pause(2000); 
     }
+ 
     async fourthtask() {
         // Step 1: Get the in-app date
         const dateElement = await $('android=new UiSelector().descriptionContains("2025")');
@@ -630,7 +631,7 @@ class allPositive {
         console.log(`📆 Detected Day: ${dayOfWeek}`);
     
         // Step 2: Conditional logic based on the day
-        if (dayOfWeek === 'Monday') {
+        if (dayOfWeek === 'Monday' || dayOfWeek === 'Tuesday' || dayOfWeek === 'Wednesday'){
             // === Monday → Record Weight ===
             console.log('🚀 Executing Record Weight task');
     
@@ -682,7 +683,7 @@ class allPositive {
         }
     }
     
-
+    
    }
 
 
