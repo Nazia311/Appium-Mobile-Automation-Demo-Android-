@@ -5,6 +5,7 @@ const moment = require("moment");
 const allure = require("@wdio/allure-reporter").default;
 const { execSync } = require('child_process');
 const LoginPage = require("./test/specs/login/login.po");
+const { remote } = require('webdriverio');
 
 let allTestResults = [],
   startTime,
@@ -38,7 +39,8 @@ exports.config = {
       "noSign": true,
       "disableWindowAnimation": true,
       "noReset": true,
-      "settings[enableMultiWindows]": true
+      "dontStopAppOnReset": true,
+      "newCommandTimeout": 300, // 5 minutes
     }
     
   ],
@@ -144,7 +146,33 @@ exports.config = {
       passed: passed,
       duration: formatDuration(duration), // Format duration here
     });
+  
+      // Add this block: Handle invalid session id by reloading driver
+    if (error && error.message.includes('invalid session id')) {
+      console.log('Invalid session detected in afterTest - attempting reload');
+      try {
+        await driver.reloadSession();  // Reloads with same capabilities, relaunches app
+        console.log('Session reloaded successfully');
+        // Optional: Re-login if state isn't preserved after reload
+        // await LoginPage.login(global.commonData.value.username);
+        // await driver.pause(2000);
+      } catch (reloadErr) {
+        console.error('Reload failed:', reloadErr);
+        if (reloadErr.message.includes('invalid session id')) {
+          // Fallback: Delete and recreate session
+          await driver.deleteSession();
+          global.driver = await remote(exports.config);  // Recreate driver from config
+          // Optional: Re-login
+          // await LoginPage.login(global.commonData.value.username);
+          // await driver.pause(2000);
+        } else {
+          throw reloadErr;  // Rethrow other errors
+        }
+      }
+    
+    }
   },
+
   after: async function () {
     console.log("\n ====== Test Suite Results ======\n");
 

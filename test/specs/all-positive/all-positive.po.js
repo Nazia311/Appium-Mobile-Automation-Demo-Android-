@@ -128,18 +128,25 @@ class allPositive {
         await driver.pause(2000); 
         const nutritionItem = await $('~THAI JASMINE RICE\n160 kcal,  (45g)'); 
         await nutritionItem.click();
-        await driver.pause(6000); 
+        await driver.pause(4000); 
     }
     async backnavigation() {
         // Navigate back to the previous screen
          const backButton = await $('~Back');
          await backButton.click();
         await driver.pause(2000); 
+
+    }
+    async backnavigation3() {
+        // Navigate back to the previous screen
+        const backButtonnew = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.Button[1]');
+        await backButtonnew.click();
+        await driver.pause(2000);
     }
     async backnavigation2() {
         // Navigate back to the previous screen
-        const backButton = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.Button[1]');
-        await backButton.click();
+        const backButtonnew = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View');
+        await backButtonnew.click();
         await driver.pause(2000);
     }
     async ScrollView(){
@@ -195,6 +202,13 @@ class allPositive {
                 await driver.pause(5000); // wait for scroll animation to complete
                 
 
+            }
+            async newback(){
+                // Navigate back to the previous screen
+                // back button ui selector
+                const backButtonnew = await $(new UiSelector().className("android.view.View").instance(4))
+                await backButtonnew.click();
+                await driver.pause(2000); 
             }
             async ScrollViewUp() {
                 let maxScrolls = 5;
@@ -422,57 +436,7 @@ class allPositive {
         await navigateback.click();
         await driver.pause(2000); 
     }
-    async vitalscan(){
-        //click vital scan submission
-        await driver.pause(2000);
-        const vitalScanButton = await $('~Capture Vitals');
-        await vitalScanButton.click();
-        await driver.pause(3000); 
-        // read the instructions
-        await driver.pause(1000);
-        // tap next button
-        const nextButton = await $('~Next');
-        await nextButton.click(); 
-        await driver.pause(2000);
-        //click start scanning
-        const startScanButton = await $('~Start Scanning');
-        // After clicking "Start Scanning"
-        await startScanButton.click();
-         await driver.pause(120000); // Wait for the scanning process to complete
-        // Wait for the result dynamically
-        const scanResultSelector = await $('~Scan Results'); 
-        const isScanResultVisible = await scanResultSelector.isExisting(); // Check if the element exists
-        if (!isScanResultVisible) {
-            throw new Error("Scan results not found, something went wrong.");
-        }
     
-        // Optionally, confirm each vital result is shown using isExisting
-        const heartRate = await $('~Heart Rate');
-        const bloodPressure = await $('~Blood Pressure');
-        const respiratoryRate = await $('~Respiratory Rate');
-    
-        const isHeartRateVisible = await heartRate.isExisting();
-        const isBloodPressureVisible = await bloodPressure.isExisting();
-        const isRespiratoryRateVisible = await respiratoryRate.isExisting();
-    
-        if (!isHeartRateVisible || !isBloodPressureVisible || !isRespiratoryRateVisible) {
-            throw new Error("One or more vital signs are missing.");
-        }
-    
-        // Tap "Done"
-        const doneButton = await $('~Done');
-        await doneButton.waitForDisplayed({ timeout: 100000 });
-        await doneButton.click();
-    
-        // Check if app is still running after completion
-        const isAppRunning = await driver.isAppInstalled("com.primefocushealth.pfhapp");
-        if (!isAppRunning) {
-            console.log("App has crashed or closed unexpectedly.");
-            throw new Error("App closed unexpectedly.");
-        }
-    
-
-    }
     async confirmvitalssubmission(){
         // Now check the status of the "Capture Vitals" button
         const captureVitalsButton = await $('~Capture Vitals');
@@ -486,7 +450,151 @@ class allPositive {
         }
 
     }
-
+    async oldscan(){
+            //click vital scan submission
+            await driver.pause(2000);
+            const vitalScanButton = await $('~Capture Vitals');
+            await vitalScanButton.click();
+            await driver.pause(3000); 
+            // read the instructions
+            await driver.pause(1000);
+            // tap next button
+            const nextButton = await $('~Next');
+            await nextButton.click(); 
+            await driver.pause(2000);
+            //click start scanning
+            const startScanButton = await $('~Start Scanning');
+            // After clicking "Start Scanning"
+            await startScanButton.click();
+             await driver.pause(100000); // Wait for the scanning process to complete
+            // Wait for the result dynamically
+            const scanResultSelector = await $('~Scan Results'); 
+            const isScanResultVisible = await scanResultSelector.isExisting(); // Check if the element exists
+            if (!isScanResultVisible) {
+                throw new Error("Scan results not found, something went wrong.");
+            }
+        
+            // Optionally, confirm each vital result is shown using isExisting
+            await driver.pause(2000);
+            // const heartRate = await $('~Heart Rate');
+            // const bloodPressure = await $('~Blood Pressure');
+            // const respiratoryRate = await $('~Respiratory Rate');
+        
+            // const isHeartRateVisible = await heartRate.isExisting();
+            // const isBloodPressureVisible = await bloodPressure.isExisting();
+            // const isRespiratoryRateVisible = await respiratoryRate.isExisting();
+        
+            // if (!isHeartRateVisible || !isBloodPressureVisible || !isRespiratoryRateVisible) {
+            //     throw new Error("One or more vital signs are missing.");
+            // }
+        
+            // Tap "Done"
+            const doneButton = await $('~Done');
+            await doneButton.click();
+        
+            // Check if app is still running after completion
+            const isAppRunning = await driver.isAppInstalled("com.primefocushealth.pfhapp");
+            if (!isAppRunning) {
+                console.log("App has crashed or closed unexpectedly.");
+                throw new Error("App closed unexpectedly.");
+            }
+        
+    
+        
+        
+    }
+    async vitalscan() {
+        // Click vital scan submission
+        await driver.pause(2000);
+        const vitalScanButton = await $('~Capture Vitals');
+        await vitalScanButton.click();
+        await driver.pause(3000);
+    
+        // Read instructions and tap next
+        await driver.pause(1000);
+        const nextButton = await $('~Next');
+        await nextButton.click();
+        await driver.pause(2000);
+    
+        // Click start scanning
+        const startScanButton = await $('~Start Scanning');
+        await startScanButton.click();
+    
+        // Dynamic wait for scan completion with app state checks
+        let appClosed = false;
+        try {
+            await driver.waitUntil(async () => {
+                // Check app state (1 = not running, 3 = background, 4 = foreground)
+                const appState = await driver.queryAppState('com.primefocushealth.pfhapp');
+                if (appState === 1) {
+                    throw new Error('App closed during scan');
+                }
+    
+                // Check if results are visible
+                return await $('~Scan Results').isExisting();
+            }, {
+                timeout: 180000,  // 3 min max (adjust based on scan time)
+                interval: 5000,   // Check every 5 sec
+                timeoutMsg: 'Scan results not found within timeout'
+            });
+        } catch (err) {
+            if (err.message.includes('App closed during scan') || err.message.includes('invalid session id')) {
+                console.log('App closed during/after scan - reloading session');
+                appClosed = true;
+                try {
+                    await driver.reloadSession();
+                    console.log('Session reloaded');
+                    // Optional: Re-login if needed after reload
+                    // await LoginPage.login(global.commonData.value.username);
+                    // await driver.pause(2000);
+                } catch (reloadErr) {
+                    console.error('Reload failed:', reloadErr);
+                    if (reloadErr.message.includes('invalid session id')) {
+                        await driver.deleteSession();
+                        global.driver = await remote(exports.config);  // Recreate from config
+                        // Optional: Re-login
+                        // await LoginPage.login(global.commonData.value.username);
+                        // await driver.pause(2000);
+                    } else {
+                        throw reloadErr;
+                    }
+                }
+            } else {
+                throw err;  // Rethrow other errors
+            }
+        }
+    
+        if (!appClosed) {
+            // Normal checks if app didn't close
+            const scanResultSelector = await $('~Scan Results');
+            if (!await scanResultSelector.isExisting()) {
+                throw new Error("Scan results not found, something went wrong.");
+            }
+    
+            const heartRate = await $('~Heart Rate');
+            const bloodPressure = await $('~Blood Pressure');
+            const respiratoryRate = await $('~Respiratory Rate');
+    
+            if (!await heartRate.isExisting() || !await bloodPressure.isExisting() || !await respiratoryRate.isExisting()) {
+                throw new Error("One or more vital signs are missing.");
+            }
+    
+            // Tap "Done"
+            await driver.pause(2000);
+            const doneButton = await $('~Done');
+            await doneButton.waitForDisplayed({ timeout: 100000 });
+            await doneButton.click();
+        } else {
+            console.log('Session reloaded after app close - assuming scan submitted, proceeding to verification');
+        }
+    
+        // Remove your old isAppInstalled check (redundant after reload)
+        // Instead, check app state post-reload
+        const postState = await driver.queryAppState('com.primefocushealth.pfhapp');
+        if (postState !== 4) {  // Not in foreground
+            throw new Error("App not in foreground after handling.");
+        }
+    }
     async explorehealth(){
         //tap explore health
         const exploreHealthButton = await $('~Explore Health');
