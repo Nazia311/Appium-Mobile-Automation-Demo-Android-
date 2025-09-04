@@ -14,14 +14,27 @@ class allPositive {
 
         // Pause for 2 seconds before clicking Next
         await driver.pause(2000);
-        const consent= await $('//android.widget.CheckBox');
-        await consent.click();
-        await driver.pause(1000);
         // Click on the Next button
         const nextButton = await $('~Next');
         await nextButton.click();
         await driver.pause(4000);
         
+    }
+    async credentials(){
+        // Wait for 1 second before starting the action
+        await driver.pause(2000);
+       // Enter the password
+       const pass = await $('//android.widget.EditText');
+       await pass.click();
+       
+       // Retrieve username from common.json and enter it into the mobile number field
+       const passnum = global.commonData.value.password;  
+       await pass.addValue(passnum);
+       await driver.pause(2000);
+       // Click on the Next button
+       const nextButton = await $('~Next');
+       await nextButton.click();
+    
     }
     
     async otp(){

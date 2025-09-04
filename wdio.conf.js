@@ -55,6 +55,8 @@ exports.config = {
     args: {
       port: 4725,
       log: "./appium.log",
+    'use-plugins': 'biometric'
+
     },
   },
   framework: "mocha",

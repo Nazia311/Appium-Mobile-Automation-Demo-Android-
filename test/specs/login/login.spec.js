@@ -4,7 +4,7 @@ const loginPage = require('./login.po');
 describe('Login Test', () => {
     it('1. Verify successful user authentication', async () => {
         //Enter phone number
-        await loginPage.openLoginScreen();
+        await loginPage.regularlogin();
         
     });
 });

@@ -26,7 +26,20 @@ class loginPage {
 
     }
 
-     
+    async regularlogin(){
+        // Wait for 1 second before starting the action
+       await driver.pause(1000); 
+       // Enter the mobile number from the common.json file
+       const mobileno = await $('//android.widget.EditText');
+       await mobileno.click();
+       // Retrieve username from common.json and enter it into the mobile number field
+       const usernum = global.commonData.value.username;  
+       await mobileno.addValue(usernum);
+       await driver.pause(1000);
+       const nextButton = await $('~Next');
+
+
+    }
       
 }
 module.exports = new loginPage();

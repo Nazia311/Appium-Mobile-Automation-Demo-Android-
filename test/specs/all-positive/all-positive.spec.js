@@ -3,15 +3,18 @@ const allPositive = require('./all-positive.po');
 
 describe('Auth Test', () => {
    
-    it('1. Verify sucessfull navigation to Home screen', async () => {
+    it('1. Verify sucessfull MFA user login with Biometric', async () => {
         //navigate to home screen
         await allPositive.welcomescreen();
+        //enetr credentials using password
+        await allPositive.credentials()
         //enter otp
         await allPositive.otp(); 
         //verify home screen
         await allPositive.verifyHome();
         
     });
+   
     it('2. Verify sucessfull navigation to user profile', async () => {
         //navigate to user profile
         await allPositive.userprofile();
@@ -133,5 +136,14 @@ describe('Auth Test', () => {
         await allPositive.tapsignout()
       
     })
-   
- });
+// it('2. Verify sucessfull MFA user login with password', async () => {
+//     //navigate to home screen
+//     await allPositive.welcomescreen();
+//     //enetr credentials using password
+//     await allPositive.credentials()
+//     //enter otp
+//     await allPositive.otp(); 
+//     //verify home screen
+//     await allPositive.verifyHome();
+// })
+  });
