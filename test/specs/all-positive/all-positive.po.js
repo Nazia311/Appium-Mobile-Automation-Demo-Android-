@@ -24,24 +24,27 @@ class allPositive {
         // Wait for 1 second before starting the action
         await driver.pause(2000);
        // Enter the password
-       const pass = await $('//android.widget.EditText');
-       await pass.click();
+       const newpassword = await $('//android.widget.EditText');
+       await newpassword.click();
        
        // Retrieve username from common.json and enter it into the mobile number field
-       const passnum = global.commonData.value.password;  
-       await pass.addValue(passnum);
+       const passnum = String(global.commonData?.value?.password || '');
+       await newpassword.addValue("User@1234");
        await driver.pause(2000);
        // Click on the Next button
        const nextButton = await $('~Next');
        await nextButton.click();
+       await driver.pause(3000);
     
     }
     
     async otp(){
+        // Wait for 1 second before starting the action
+        await driver.pause(2000);
         const otpCode = '123456';
 
         // Select the first input field
-        const otpInput = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]');
+        const otpInput = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]');
         await otpInput.click();
         // Enter entire OTP at once
         await otpInput.addValue(otpCode);  

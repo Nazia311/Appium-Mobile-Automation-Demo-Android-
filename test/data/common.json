@@ -3,7 +3,8 @@
       "username":"01933449933",
       "otppass": "123456",
       "food": "rice",
-      "weight": "52"
+      "weight": "52",
+      "password":"User@1234"
     }
   }
   
