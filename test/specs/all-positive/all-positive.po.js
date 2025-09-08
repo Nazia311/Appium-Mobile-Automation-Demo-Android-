@@ -25,7 +25,7 @@ class allPositive {
     }
     async credentials(){
         // Wait for 1 second before starting the action
-        await driver.pause(2000);
+        await driver.pause(5000);
        // Enter the password
        const newpassword = await $('//android.widget.EditText');
        await newpassword.click();
@@ -44,49 +44,49 @@ class allPositive {
         // Wait for notification to arrive
         await driver.pause(4000);
     
-        async function fetchOtpFromNotification() {
-            const maxRetries = 5; // Maximum number of retries
-            const retryInterval = 5000; // Time to wait between retries (in milliseconds)
-        
-            for (let attempt = 1; attempt <= maxRetries; attempt++) {
-                try {
-                    console.log(`Attempt ${attempt}: Expanding notification panel...`);
-                    execSync('adb shell cmd statusbar expand-notifications', { stdio: 'inherit' });
-                    console.log('Notification panel expanded successfully.');
-        
-                    await driver.pause(retryInterval); // Wait for notifications to load
-        
-                    // Find the latest notification containing "Your authentication code"
-                    const otpNotifications = await $$('android=new UiSelector().textContains("Your authentication code")');
-                    if (otpNotifications.length > 0) {
-                        const latestNotification = otpNotifications[otpNotifications.length - 1];
-                        const fullText = await latestNotification.getText();
-                        console.log("Notification Text:", fullText);
-        
-                        // Extract 6-digit OTP using regex
-                        const match = fullText.match(/\b\d{6}\b/);
-                        const otp = match ? match[0] : null;
-                        if (otp) {
-                            console.log("Extracted OTP:", otp);
-                            execSync('adb shell cmd statusbar collapse', { stdio: 'inherit' });
-                            return otp;
-                        } else {
-                            console.error('No 6-digit OTP found in notification');
-                            throw new Error('No 6-digit OTP found in notification');
-                        }
-                    } else {
-                        console.warn('No OTP notification found. Retrying...');
-                    }
-                } catch (error) {
-                    console.error(`Attempt ${attempt} failed:`, error.message);
-                    if (attempt === maxRetries) {
-                        throw new Error('Unable to fetch OTP after multiple attempts');
-                    }
+       async function fetchOtpFromNotification() {
+    const maxRetries = 5; // Maximum number of retries
+    const retryInterval = 5000; // Time to wait between retries (in milliseconds)
+
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            console.log(`Attempt ${attempt}: Expanding notification panel...`);
+            execSync('adb shell cmd statusbar expand-notifications', { stdio: 'inherit' });
+            console.log('Notification panel expanded successfully.');
+
+            await driver.pause(retryInterval); // Wait for notifications to load
+
+            // Find the latest notification containing "Your authentication code"
+            const otpNotifications = await $$('android=new UiSelector().textContains("Your authentication code")');
+            if (otpNotifications.length > 0) {
+                const latestNotification = otpNotifications[otpNotifications.length - 1];
+                const fullText = await latestNotification.getText();
+                console.log("Notification Text:", fullText);
+
+                // Extract 6-digit OTP using regex
+                const match = fullText.match(/\b\d{6}\b/);
+                const otp = match ? match[0] : null;
+                if (otp) {
+                    console.log("Extracted OTP:", otp);
+                    execSync('adb shell cmd statusbar collapse', { stdio: 'inherit' });
+                    return otp;
+                } else {
+                    console.error('No 6-digit OTP found in notification');
+                    throw new Error('No 6-digit OTP found in notification');
                 }
-        
-                await driver.pause(retryInterval); // Wait before retrying
+            } else {
+                console.warn('No OTP notification found. Retrying...');
+            }
+        } catch (error) {
+            console.error(`Attempt ${attempt} failed:`, error.message);
+            if (attempt === maxRetries) {
+                throw new Error('Unable to fetch OTP after multiple attempts');
             }
         }
+
+        await driver.pause(retryInterval); // Wait before retrying
+    }
+}
         // Enter OTP into the input field
         async function enterOTP(otp) {
             const otpField = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]');
@@ -222,7 +222,7 @@ class allPositive {
     }
     async backnavigation3() {
         // Navigate back to the previous screen
-        const backButtonnew = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.Button[1]');
+        const backButtonnew = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.Button[1]');
         await backButtonnew.click();
         await driver.pause(2000);
     }
@@ -256,14 +256,14 @@ class allPositive {
             actions: [
                 { type: 'pointerMove', duration: 0, x: 962, y: 1200 },   // Adjusted start
                 { type: 'pointerDown', button: 0 },
-                { type: 'pause', duration: 200 },
+                { type: 'pause', duration: 100 },
                 { type: 'pointerMove', duration: 800, x: 962, y: 400 },  // Scroll upward
                 { type: 'pointerUp', button: 0 },
             ],
             },
         ]);
          // Let scroll complete
-        await driver.pause(2000);
+        await driver.pause(1000);
         }
 
         if (!elementFound) {
@@ -286,10 +286,32 @@ class allPositive {
                 
 
             }
+        async scrollcontent(){
+            // Scroll to the last element
+            let maxScrolls = 10; // Maximum number of scroll attempts
+            for (let i = 0; i < maxScrolls; i++) {
+                // Perform a downward scroll action
+                await driver.performActions([
+                    {
+                        type: 'pointer',
+                        id: 'finger1',
+                        parameters: { pointerType: 'touch' },
+                        actions: [
+                            { type: 'pointerMove', duration: 0, x: 500, y: 1200 }, // Start position
+                            { type: 'pointerDown', button: 0 },
+                            { type: 'pause', duration: 100 }, // Short pause for faster scrolling
+                            { type: 'pointerMove', duration: 300, x: 500, y: 400 }, // End position (scroll down)
+                            { type: 'pointerUp', button: 0 },
+                        ],
+                    },
+                ]);
+                await driver.pause(500); // Short pause for stability after each scroll
+            }
+        }
             async newback(){
                 // Navigate back to the previous screen
                 // back button ui selector
-                const backButtonnew = await $(new UiSelector().className("android.view.View").instance(4))
+                const backButtonnew = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View')
                 await backButtonnew.click();
                 await driver.pause(2000); 
             }
@@ -384,6 +406,7 @@ class allPositive {
             
         }
         async verifySubmission() {
+            await driver.pause(2000);
             // Verify as weekly check is submitted it is disabled
             const weeklyCheck = await $('~Weekly Check-In');
             const isEnabled = await weeklyCheck.isEnabled();
@@ -522,6 +545,7 @@ class allPositive {
     
     async confirmvitalssubmission(){
         // Now check the status of the "Capture Vitals" button
+        await driver.pause(3000);
         const captureVitalsButton = await $('~Capture Vitals');
 
         // Option 1: Check if the button is disabled

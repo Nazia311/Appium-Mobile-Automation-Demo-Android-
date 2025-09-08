@@ -27,11 +27,13 @@ describe('Auth Test', () => {
     it('3. Verify sucessfull scroll down and navigation to learning content', async () => {
         //scroll to the bottom of the page
         await allPositive.ScrollView()
-        //tap back
-        await allPositive.backnavigation2();
-        await allPositive.backnavigation();
-        //tap back again
-       // await allPositive.backnavigation();
+        //scroll content
+        await allPositive.scrollcontent()
+        await allPositive.newback()
+        await allPositive.backnavigation()
+        
+
+        
         
     });
     it ('4. Verify sucessfull scroll up', async () => {

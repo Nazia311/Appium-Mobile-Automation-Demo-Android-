@@ -131,14 +131,14 @@ try {
     startTime = moment();
     allure.addStep(`Test suite started at: ${startTime.format("YYYY-MM-DD HH:mm:ss")}`);
     const dataPath = path.join(__dirname, './test/data/common.json');
-  //    // --- Grant Camera Permission via ADB ---
-  //    try {
-  //     console.log('Granting camera permission via ADB...');
-  //     execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
-  //     console.log('Camera permission granted successfully.');
-  // } catch (err) {
-  //     console.error('Failed to grant camera permission:', err);
-  // }
+     // --- Grant Camera Permission via ADB ---
+     try {
+      console.log('Granting camera permission via ADB...');
+      execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
+      console.log('Camera permission granted successfully.');
+  } catch (err) {
+      console.error('Failed to grant camera permission:', err);
+  }
 
     try {
       if (!fs.existsSync(dataPath)) {
