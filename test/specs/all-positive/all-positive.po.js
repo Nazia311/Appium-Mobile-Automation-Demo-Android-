@@ -1,4 +1,5 @@
 
+const { execSync } = require('child_process');
 class allPositive {
     async welcomescreen() {
         // Wait for 1 second before starting the action
@@ -19,6 +20,8 @@ class allPositive {
         await nextButton.click();
         await driver.pause(4000);
         
+
+        
     }
     async credentials(){
         // Wait for 1 second before starting the action
@@ -37,10 +40,74 @@ class allPositive {
        await driver.pause(3000);
     
     }
+    async otp() {
+        // Wait for notification to arrive
+        await driver.pause(4000);
     
-    async otp(){
+        async function fetchOtpFromNotification() {
+            const maxRetries = 5; // Maximum number of retries
+            const retryInterval = 5000; // Time to wait between retries (in milliseconds)
+        
+            for (let attempt = 1; attempt <= maxRetries; attempt++) {
+                try {
+                    console.log(`Attempt ${attempt}: Expanding notification panel...`);
+                    execSync('adb shell cmd statusbar expand-notifications', { stdio: 'inherit' });
+                    console.log('Notification panel expanded successfully.');
+        
+                    await driver.pause(retryInterval); // Wait for notifications to load
+        
+                    // Find the latest notification containing "Your authentication code"
+                    const otpNotifications = await $$('android=new UiSelector().textContains("Your authentication code")');
+                    if (otpNotifications.length > 0) {
+                        const latestNotification = otpNotifications[otpNotifications.length - 1];
+                        const fullText = await latestNotification.getText();
+                        console.log("Notification Text:", fullText);
+        
+                        // Extract 6-digit OTP using regex
+                        const match = fullText.match(/\b\d{6}\b/);
+                        const otp = match ? match[0] : null;
+                        if (otp) {
+                            console.log("Extracted OTP:", otp);
+                            execSync('adb shell cmd statusbar collapse', { stdio: 'inherit' });
+                            return otp;
+                        } else {
+                            console.error('No 6-digit OTP found in notification');
+                            throw new Error('No 6-digit OTP found in notification');
+                        }
+                    } else {
+                        console.warn('No OTP notification found. Retrying...');
+                    }
+                } catch (error) {
+                    console.error(`Attempt ${attempt} failed:`, error.message);
+                    if (attempt === maxRetries) {
+                        throw new Error('Unable to fetch OTP after multiple attempts');
+                    }
+                }
+        
+                await driver.pause(retryInterval); // Wait before retrying
+            }
+        }
+        // Enter OTP into the input field
+        async function enterOTP(otp) {
+            const otpField = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]');
+            await otpField.click();
+            await otpField.addValue(otp);
+            await driver.pause(2000); // Wait for OTP submission
+        }
+    
+        try {
+            // Fetch OTP and enter it
+            const otp = await fetchOtpFromNotification();
+            await enterOTP(otp);
+            await driver.pause(4000); // Optional pause to wait for verification
+        } catch (error) {
+            console.error('Error in OTP process:', error.message);
+            throw error;
+        }
+    }
+    async otpcall(){
         // Wait for 1 second before starting the action
-        await driver.pause(2000);
+        await driver.pause(4000);
         const otpCode = '123456';
 
         // Select the first input field
@@ -49,7 +116,7 @@ class allPositive {
         // Enter entire OTP at once
         await otpInput.addValue(otpCode);  
         // Optional pause to wait for verification
-        await driver.pause(3000);  
+        await driver.pause(1000);  
     }
     async homescreen() {
         // Wait for 1 second before starting the action

@@ -55,12 +55,35 @@ exports.config = {
     args: {
       port: 4725,
       log: "./appium.log",
-    'use-plugins': 'biometric'
+    'use-plugins': ['biometric'],
 
     },
   },
   framework: "mocha",
   onPrepare: function (config, capabilities) {
+    console.log('Ensuring device is unlocked...');
+try {
+  execSync('adb shell input keyevent 82'); // Unlock the device
+  console.log('Device unlocked successfully.');
+} catch (err) {
+  console.error('Failed to unlock device:', err.message);
+}
+   // Verify ADB is installed and device is connected
+   try {
+    const devices = execSync('adb devices', { encoding: 'utf-8' });
+    if (!devices.includes('device')) {
+      console.error('No devices connected via ADB');
+      throw new Error('No devices connected via ADB');
+    }
+    console.log('ADB devices:', devices);
+  } catch (err) {
+    console.error('ADB setup error:', err.message);
+    throw new Error('ADB is not properly configured or no device is connected');
+  }
+
+  // Grant camera permission
+
+
     console.log('Granting camera permission via ADB...');
     try {
       execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
@@ -68,6 +91,25 @@ exports.config = {
     } catch (err) {
       console.error('Failed to grant camera permission:', err);
     }
+    // Grant notification access permission (for reading OTP)
+    console.log('Granting notification access permission via ADB...');
+    try {
+      execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.POST_NOTIFICATIONS');
+      console.log('Notification permission granted successfully.');
+    } catch (err) {
+      console.error('Failed to grant notification permission:', err);
+    }
+
+    // Test notification panel expansion
+  console.log('Testing notification panel expansion...');
+  try {
+    execSync('adb shell cmd statusbar expand-notifications', { stdio: 'inherit' });
+    console.log('Notification panel expansion test successful.');
+    execSync('adb shell cmd statusbar collapse', { stdio: 'inherit' });
+  } catch (err) {
+    console.warn('Notification panel expansion test failed, using swipe fallback in tests:', err.message);
+  }
+
   },
   reporters: [
     "spec",
@@ -89,14 +131,15 @@ exports.config = {
     startTime = moment();
     allure.addStep(`Test suite started at: ${startTime.format("YYYY-MM-DD HH:mm:ss")}`);
     const dataPath = path.join(__dirname, './test/data/common.json');
-     // --- Grant Camera Permission via ADB ---
-     try {
-      console.log('Granting camera permission via ADB...');
-      execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
-      console.log('Camera permission granted successfully.');
-  } catch (err) {
-      console.error('Failed to grant camera permission:', err);
-  }
+  //    // --- Grant Camera Permission via ADB ---
+  //    try {
+  //     console.log('Granting camera permission via ADB...');
+  //     execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
+  //     console.log('Camera permission granted successfully.');
+  // } catch (err) {
+  //     console.error('Failed to grant camera permission:', err);
+  // }
+
     try {
       if (!fs.existsSync(dataPath)) {
         throw new Error(`common.json file not found at path: ${dataPath}`);
