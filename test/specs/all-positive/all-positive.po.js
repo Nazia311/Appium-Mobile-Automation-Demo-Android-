@@ -610,6 +610,61 @@ class allPositive {
         
         
     }
+
+    async upmethod(){
+        let maxScrolls = 10; // Maximum number of scroll attempts
+        let elementFound = false;
+    
+        for (let i = 0; i < maxScrolls; i++) {
+            try {
+                const element = await $('~You\'re all caught up,\ngreat work!');
+                if (await element.isDisplayed()) {
+                    elementFound = true;
+                    console.log('Element "You\'re all caught up, great work!" is visible.');
+                    break;
+                }
+            } catch (err) {
+                console.log(`Scroll attempt ${i + 1}: Element not found, scrolling...`);
+                // Perform a downward scroll action
+                await driver.performActions([
+                    {
+                        type: 'pointer',
+                        id: 'finger1',
+                        parameters: { pointerType: 'touch' },
+                        actions: [
+                            { type: 'pointerMove', duration: 0, x: 500, y: 1200 }, // Start position
+                            { type: 'pointerDown', button: 0 },
+                            { type: 'pause', duration: 100 }, // Short pause for faster scrolling
+                            { type: 'pointerMove', duration: 300, x: 500, y: 400 }, // End position (scroll down)
+                            { type: 'pointerUp', button: 0 },
+                        ],
+                    },
+                ]);
+                await driver.pause(500); // Short pause for stability after each scroll
+            }
+        }
+    
+        if (!elementFound) {
+            throw new Error('Element "You\'re all caught up, great work!" not found after scrolling.');
+        }
+    }
+    
+
+    async verifyallcomplete() {
+        try {
+            const element = await $('~You\'re all caught up,\ngreat work!');
+            const isVisible = await element.isDisplayed();
+            if (isVisible) {
+                console.log('Element "You\'re all caught up, great work!" is visible.');
+            } else {
+                console.log('Element "You\'re all caught up, great work!" is not visible.');
+            }
+            return isVisible;
+        } catch (err) {
+            console.error('Failed to locate the element "You\'re all caught up, great work!".', err.message);
+            return false;
+        }
+    }
     async vitalscan() {
         // Click vital scan submission
         await driver.pause(2000);

@@ -69,7 +69,8 @@ describe('Auth Test', () => {
     it('8. Verify sucessful Record weight task or PHQ9/GAD7 submission', async () => {
         //submit fourth task
         await allPositive.fourthtask();
-        
+       //verify all  tasks completed
+        await allPositive.verifyallcompleted();
     
     })
 
@@ -82,7 +83,7 @@ describe('Auth Test', () => {
         //tap back
         await allPositive.backnavigation();
         //scroll to the top of the page
-        await allPositive.ScrollViewUp();
+        await allPositive.upmethod()
         
 
 
