@@ -57,7 +57,7 @@ class allPositive {
             await driver.pause(retryInterval); // Wait for notifications to load
 
             // Find the latest notification containing "Your authentication code"
-            const otpNotifications = await $$('android=new UiSelector().textContains("Your authentication code")');
+            const otpNotifications = await $$('android=new UiSelector().textContains("Your one-time password(OTP) is:")');
             if (otpNotifications.length > 0) {
                 const latestNotification = otpNotifications[otpNotifications.length - 1];
                 const fullText = await latestNotification.getText();
@@ -648,7 +648,12 @@ class allPositive {
             throw new Error('Element "You\'re all caught up, great work!" not found after scrolling.');
         }
     }
-    
+    async biometricsscan(){
+        await driver.pause(2000);
+        const biometricScanButton = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]');
+        await biometricScanButton.click();
+        await driver.pause(8000);
+    }
 
     async verifyallcomplete() {
         try {

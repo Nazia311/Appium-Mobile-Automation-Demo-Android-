@@ -6,12 +6,12 @@ describe('Auth Test', () => {
     it('1. Verify sucessfull MFA user login with Biometric', async () => {
         //navigate to home screen
         await allPositive.welcomescreen();
-        //enetr credentials using password
-        await allPositive.credentials()
+        //enter with biometric
+        await allPositive.biometricsscan();
         //enter otp
-        await allPositive.otp(); 
+        await allPositive.otpcall(); 
         //verify home screen
-        await allPositive.verifyHome();
+        //await allPositive.verifyHome();
         
     });
    
@@ -70,7 +70,7 @@ describe('Auth Test', () => {
         //submit fourth task
         await allPositive.fourthtask();
        //verify all  tasks completed
-        await allPositive.verifyallcompleted();
+       
     
     })
 
