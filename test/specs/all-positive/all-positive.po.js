@@ -57,7 +57,7 @@ class allPositive {
             await driver.pause(retryInterval); // Wait for notifications to load
 
             // Find the latest notification containing "Your authentication code"
-            const otpNotifications = await $$('android=new UiSelector().textContains("Your one-time password(OTP) is:")');
+            const otpNotifications = await $$('android=new UiSelector().textContains("Your authentication code is:")');
             if (otpNotifications.length > 0) {
                 const latestNotification = otpNotifications[otpNotifications.length - 1];
                 const fullText = await latestNotification.getText();

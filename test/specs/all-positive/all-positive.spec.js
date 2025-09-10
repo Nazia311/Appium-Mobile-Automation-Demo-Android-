@@ -138,14 +138,14 @@ describe('Auth Test', () => {
         await allPositive.tapsignout()
       
     })
-// it('2. Verify sucessfull MFA user login with password', async () => {
-//     //navigate to home screen
-//     await allPositive.welcomescreen();
-//     //enetr credentials using password
-//     await allPositive.credentials()
-//     //enter otp
-//     await allPositive.otp(); 
-//     //verify home screen
-//     await allPositive.verifyHome();
-// })
+it('16. Verify sucessfull MFA user login with password', async () => {
+    //navigate to home screen
+    await allPositive.welcomescreen();
+    //enetr credentials using password
+    await allPositive.credentials()
+    //enter otp from notification
+    await allPositive.otp(); 
+    //verify home screen
+    await allPositive.verifyHome();
+})
   });
