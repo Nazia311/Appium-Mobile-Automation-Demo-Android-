@@ -64,15 +64,15 @@ class allPositive {
                 console.log("Notification Text:", fullText);
 
                 // Extract 6-digit OTP using regex
-                const match = fullText.match(/\b\d{6}\b/);
+                const match = fullText.match(/\b\d{4}\b/);
                 const otp = match ? match[0] : null;
                 if (otp) {
                     console.log("Extracted OTP:", otp);
                     execSync('adb shell cmd statusbar collapse', { stdio: 'inherit' });
                     return otp;
                 } else {
-                    console.error('No 6-digit OTP found in notification');
-                    throw new Error('No 6-digit OTP found in notification');
+                    console.error('No 4-digit OTP found in notification');
+                    throw new Error('No 4-digit OTP found in notification');
                 }
             } else {
                 console.warn('No OTP notification found. Retrying...');
