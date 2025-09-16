@@ -20,8 +20,54 @@ class allPositive {
         await nextButton.click();
         await driver.pause(4000);
         
-
+ 
         
+    }
+    async setpassword(){
+        await driver.pause(10000);
+        //enter new password
+        const setpassword = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]');
+        await setpassword.click();
+        await setpassword.addValue("User@1234");
+        await driver.pause(1000);
+        //confirm the new password
+        const confirmpassword = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]');
+        await confirmpassword.click();
+        await confirmpassword.addValue("User@1234");
+        await driver.pause(2000);
+        // agree consent
+        const consent= await $('//android.widget.CheckBox');
+        await consent.click();
+        await driver.pause(2000);
+        //tap finish
+        const finishButton = await $('~Finish');
+        await finishButton.click();
+
+
+    }
+    async enablebiometrics(){
+        // Wait for 1 second before starting the action
+        await driver.pause(3000);
+        //enable biometrics
+        const enablebio = await $('~Enable');
+        await enablebio.click();
+        await driver.pause(2000);
+    }
+    async getstarted(){
+        // Wait for 1 second before starting the action
+        await driver.pause(2000);
+        //tap on get started
+        const getstarted = await $('~Get Started');
+        await getstarted.click();
+        await driver.pause(2000);
+    }
+    async home(){
+        //verify home screen
+        const homeScreen = await $('~Health Checklist');
+        const isDisplayed = await homeScreen.isDisplayed();
+        if (!isDisplayed) {
+            throw new Error("Home screen is not displayed");
+        }
     }
     async credentials(){
         // Wait for 1 second before starting the action
@@ -37,7 +83,7 @@ class allPositive {
        // Click on the Next button
        const nextButton = await $('~Next');
        await nextButton.click();
-       await driver.pause(3000);
+       await driver.pause(4000);
     
     }
     async otp() {
@@ -158,6 +204,21 @@ class allPositive {
         const userProfileIcon = await $('//android.widget.ScrollView/android.widget.ImageView[2]');
         await userProfileIcon.click();
         await driver.pause(3000); // Wait for the user profile screen to load
+    }
+    async usersignout(){
+        //tap on user profile icon
+        await driver.pause(3000); 
+        // Wait for the home screen to load
+        const userProfileIcon = await $('//android.widget.ScrollView/android.widget.ImageView[2]');
+        await userProfileIcon.click();
+        await driver.pause(3000); // Wait for the user profile screen to load
+        //tap on sign out
+        const signOutButton = await $('~Sign Out');
+        await signOutButton.click();
+        await driver.pause(2000); // Wait for the dialog to appear
+        const signOutDialog = await $('~Yes');
+        await signOutDialog.click()
+        
     }
     async verifyUserProfile() {
         // Verify User Profile screen is displayed
@@ -652,7 +713,7 @@ class allPositive {
         await driver.pause(2000);
         const biometricScanButton = await $('//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]');
         await biometricScanButton.click();
-        await driver.pause(8000);
+        await driver.pause(10000);
     }
 
     async verifyallcomplete() {
