@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const moment = require("moment");
 const allure = require("@wdio/allure-reporter").default;
-const { execSync } = require('child_process');
+const { exec } = require('child_process');
 const LoginPage = require("./test/specs/login/login.po");
 const { remote } = require('webdriverio');
 
@@ -30,10 +30,8 @@ exports.config = {
       "platformName": "Android",
       "deviceName": "R58X7086E6R",
       "automationName": "UiAutomator2",
-      "app": "/home/rodela/pfh_app_automation/pfh-app-automation/smart-app/android/app.apk",
+      "app": "/home/rodela/TheApp.apk",
       "platformVersion": "14",
-      "appPackage": "com.primefocushealth.pfhapp",  
-      "appActivity": "com.primefocushealth.pfhapp.MainActivity", 
       "autoGrantPermissions": true,
       "ignoreHiddenApiPolicyError": true,
       "noSign": true,
@@ -81,34 +79,7 @@ try {
     throw new Error('ADB is not properly configured or no device is connected');
   }
 
-  // Grant camera permission
-
-
-    console.log('Granting camera permission via ADB...');
-    try {
-      execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
-      console.log('Camera permission granted successfully.');
-    } catch (err) {
-      console.error('Failed to grant camera permission:', err);
-    }
-    // Grant notification access permission (for reading OTP)
-    console.log('Granting notification access permission via ADB...');
-    try {
-      execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.POST_NOTIFICATIONS');
-      console.log('Notification permission granted successfully.');
-    } catch (err) {
-      console.error('Failed to grant notification permission:', err);
-    }
-
-    // Test notification panel expansion
-  console.log('Testing notification panel expansion...');
-  try {
-    execSync('adb shell cmd statusbar expand-notifications', { stdio: 'inherit' });
-    console.log('Notification panel expansion test successful.');
-    execSync('adb shell cmd statusbar collapse', { stdio: 'inherit' });
-  } catch (err) {
-    console.warn('Notification panel expansion test failed, using swipe fallback in tests:', err.message);
-  }
+ 
 
   },
   reporters: [
@@ -131,14 +102,7 @@ try {
     startTime = moment();
     allure.addStep(`Test suite started at: ${startTime.format("YYYY-MM-DD HH:mm:ss")}`);
     const dataPath = path.join(__dirname, './test/data/common.json');
-     // --- Grant Camera Permission via ADB ---
-     try {
-      console.log('Granting camera permission via ADB...');
-      execSync('adb shell pm grant com.primefocushealth.pfhapp android.permission.CAMERA');
-      console.log('Camera permission granted successfully.');
-  } catch (err) {
-      console.error('Failed to grant camera permission:', err);
-  }
+    
 
     try {
       if (!fs.existsSync(dataPath)) {
@@ -243,19 +207,8 @@ try {
 
   onComplete: async function () {
     console.log("All tests complete. Uninstalling app...");
-    await new Promise((resolve, reject) => {
-      exec(
-        "adb uninstall com.primefocushealth.pfhapp",
-        (err, stdout, stderr) => {
-          if (err) {
-            console.error(`Error uninstalling app: ${err.message}`);
-            return reject(err);
-          }
-          console.log("App uninstalled:", stdout);
-          resolve();
-        }
-      );
-    });
+    // Add logic here if needed, or remove the Promise entirely if unnecessary
+    console.log("No additional cleanup logic implemented.");
 
     // Capture the end time after the test suite completes
     endTime = moment();
