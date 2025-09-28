@@ -51,7 +51,7 @@ class app {
 
     await driver.pause(2000);
 
-    // click AWS 
+    // click DROPBOX
     const aws = $('(//android.view.ViewGroup[@resource-id="RNE__LISTITEM__padView"])[3]');
     await aws.click();
     await driver.pause(2000);
@@ -200,7 +200,7 @@ async back(){
           ]
       }
   ]);
-  // click list demo
+  // click list demo DROPBOX
   const listDemo = $('(//android.view.ViewGroup[@resource-id="RNE__LISTITEM__padView"])[6]');
   await listDemo.click();
   await driver.pause(2000);
@@ -211,6 +211,69 @@ async back(){
     await ok.click();
     console.log('Permission dialog handled.');
   }
+  
+  }
+  async pickerDemofirsttime(){
+    await driver.pause(2000);
+    const pickerDemo = $('(//android.view.ViewGroup[@resource-id="RNE__LISTITEM__padView"])[9]');
+    await pickerDemo.click();
+    await driver.pause(2000);
+    // click on picker
+    const picker = $('~dayPicker');
+    await picker.click();
+    await driver.pause(2000);
+    const day = $('//android.widget.CheckedTextView[@resource-id="android:id/text1" and @text="8"]');
+    if (await day.isDisplayed()) {
+      console.log('The date element is displayed.');
+      const dayText = await day.getText();
+      console.log(`The date being selected is: ${dayText}`);
+      await day.click();
+    await driver.pause(2000);
+    }
+    // click learn more
+    const learnMore = $('~learnMore');
+    await learnMore.click();
+    //click date 
+    await driver.pause(2000);
+    const okButton = $('//android.widget.Button[@resource-id="android:id/button1"]');
+    // Wait for the OK button to be displayed
+    if (await okButton.waitForDisplayed({ timeout: 5000 })) {
+        console.log('Dialog box appeared. Clicking OK.');
+        await okButton.click();
+        console.log('Permission dialog handled.');
+    } else {
+        console.log('OK button not found or dialog box did not appear.');
+    }
+   
+  }
+  async pickerDemosecondtime(){
+    // click on picker
+    const picker = $('~dayPicker');
+    await picker.click();
+    await driver.pause(2000);
+    const day = $('//android.widget.CheckedTextView[@resource-id="android:id/text1" and @text="13"]');
+    if (await day.isDisplayed()) {
+      console.log('The date element is displayed.');
+      const dayText = await day.getText();
+      console.log(`The date being selected is: ${dayText}`);
+      await day.click();
+    await driver.pause(2000);
+    }
+    // click learn more
+    const learnMore = $('~learnMore');
+    await learnMore.click();
+    //click date 
+    await driver.pause(2000);
+    const okButton = $('//android.widget.Button[@resource-id="android:id/button1"]');
+    // Wait for the OK button to be displayed
+    if (await okButton.waitForDisplayed({ timeout: 5000 })) {
+        console.log('Dialog box appeared. Clicking OK.');
+        await okButton.click();
+        console.log('Permission dialog handled.');
+    } else {
+        console.log('OK button not found or dialog box did not appear.');
+    }
+   
   
   }
 }

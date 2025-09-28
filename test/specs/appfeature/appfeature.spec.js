@@ -30,5 +30,13 @@ describe('Auth Test', () => {
       await app.back()
       
      });
-   
+     it('4. Verify successful check picker demo functionality two times', async () => {
+      // check clipboard text two times
+      await app.pickerDemofirsttime();
+      //verify second time demo
+      await app.pickerDemosecondtime();
+      // click back
+      await app.back()
+      
+     });
   });
