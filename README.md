@@ -26,7 +26,7 @@
 1. To run all test suites: 
    `npx wdio run ./wdio.conf.js`
 2. To run a single test suite:
-   `npx wdio run wdio.conf.js --spec ./test/specs/all-positive/all-positive.spec.js`
+   `npx wdio run wdio.conf.js --spec ./test/specs/appfeature/appfeature.spec.js`
 3. For report generation:
    `allure generate allure-results --clean -o allure-report` or  
    `npx allure generate allure-results --clean`
