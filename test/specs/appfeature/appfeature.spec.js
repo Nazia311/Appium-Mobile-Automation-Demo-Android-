@@ -23,7 +23,12 @@ describe('Auth Test', () => {
    });
    it('3. Verify successful check list demo functionality two times', async () => {
       // check clipboard text two times
-      
+      await app.listDemofirsttime();
+      //verify second time demo
+      await app.listDemosecondtime();
+      // click back
+      await app.back()
       
      });
+   
   });

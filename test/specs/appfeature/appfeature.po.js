@@ -166,6 +166,53 @@ async back(){
     await back.click();
     await driver.pause(2000);
   }
+
+  async listDemofirsttime(){
+    await driver.pause(2000);
+    // click list demo
+    const listDemo = $('(//android.view.ViewGroup[@resource-id="RNE__LISTITEM__padView"])[6]');
+    await listDemo.click();
+    await driver.pause(2000);
+    // click AWS 
+    const aws = $('(//android.view.ViewGroup[@resource-id="RNE__LISTITEM__padView"])[3]');
+    await aws.click();
+    await driver.pause(2000);
+    // click ok
+    const ok = $('//android.widget.Button[@resource-id="android:id/button1"]');
+    if (await ok.isDisplayed()) {
+      await ok.click();
+      console.log('Permission dialog handled.');
+    }
+    
+  }
+  async listDemosecondtime(){
+    await driver.pause(2000);
+    await driver.performActions([
+      {
+          type: 'pointer',
+          id: 'finger1',
+          parameters: { pointerType: 'touch' },
+          actions: [
+              { type: 'pointerMove', duration: 0, x: 500, y: 1500 },
+              { type: 'pointerDown', button: 0 },
+              { type: 'pointerMove', duration: 1000, x: 500, y: 500 },
+              { type: 'pointerUp', button: 0 }
+          ]
+      }
+  ]);
+  // click list demo
+  const listDemo = $('(//android.view.ViewGroup[@resource-id="RNE__LISTITEM__padView"])[6]');
+  await listDemo.click();
+  await driver.pause(2000);
+  
+  // click ok
+  const ok = $('//android.widget.Button[@resource-id="android:id/button1"]');
+  if (await ok.isDisplayed()) {
+    await ok.click();
+    console.log('Permission dialog handled.');
+  }
+  
+  }
 }
 
 
