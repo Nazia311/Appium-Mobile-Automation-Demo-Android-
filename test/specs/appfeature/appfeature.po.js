@@ -1,5 +1,4 @@
 
-const { execSync } = require('child_process');
 class app {
    async clipboard(){
        //click clipboard
@@ -123,4 +122,4 @@ await driver.pause(2000);
 
 
 
-module.exports = new allPositive();
+module.exports = new app;

@@ -1,20 +1,20 @@
 const { expect } = require('@wdio/globals');
-const allPositive = require('./all-positive.po');
+const app = require('./appfeature.po');
 
 describe('Auth Test', () => {
 
    it('1. Verify successful check clipboard text demo, List Demo, Picker Demo', async () => {
     // check clipboard text
-    await allPositive.clipboard();
+    await app.clipboard();
     // list demo
-    await allPositive.listDemo();
+    await app.listDemo();
     // picker demo
-    await allPositive.pickerDemo();
+    await app.pickerDemo();
    });
    
    it('2. Verify successful check clipboard functionality two times', async () => {
     // check clipboard text two times
-    await allPositive.clipboardtwotimes();
+    await app.clipboardtwotimes();
     
    });
   });

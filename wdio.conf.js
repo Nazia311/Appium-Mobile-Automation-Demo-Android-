@@ -3,8 +3,9 @@ const path = require("path");
 const fs = require("fs");
 const moment = require("moment");
 const allure = require("@wdio/allure-reporter").default;
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
 const LoginPage = require("./test/specs/login/login.po");
+const app = require("./test/specs/appfeature/appfeature.po");
 const { remote } = require('webdriverio');
 
 let allTestResults = [],
@@ -31,6 +32,8 @@ exports.config = {
       "deviceName": "R58X7086E6R",
       "automationName": "UiAutomator2",
       "app": "/home/rodela/TheApp.apk",
+      "appPackage": "com.appiumpro.the_app", 
+      "appActivity": "com.appiumpro.the_app.MainActivity",
       "platformVersion": "14",
       "autoGrantPermissions": true,
       "ignoreHiddenApiPolicyError": true,
@@ -102,47 +105,38 @@ try {
     startTime = moment();
     allure.addStep(`Test suite started at: ${startTime.format("YYYY-MM-DD HH:mm:ss")}`);
     const dataPath = path.join(__dirname, './test/data/common.json');
-    
 
     try {
-      if (!fs.existsSync(dataPath)) {
-        throw new Error(`common.json file not found at path: ${dataPath}`);
-      }
-      global.commonData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-      console.log("Login data loaded:", global.commonData);
+        if (!fs.existsSync(dataPath)) {
+            throw new Error(`common.json file not found at path: ${dataPath}`);
+        }
+        global.commonData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+        console.log("Login data loaded:", global.commonData);
     } catch (err) {
-      console.error("Error loading Login data:", err);
-      throw new Error("Failed to load Login data.");
+        console.error("Error loading Login data:", err);
+        throw new Error("Failed to load Login data.");
     }
-    try {
-      await LoginPage.login(global.commonData.value.username); // Pass only username
-      await driver.pause(2000)
-      console.log("App launched and logged in successfully.");
-    } catch (loginError) {
-      console.error("Login failed:", loginError);
-      throw new Error("Login failed");
-    }
-  },
+    // Removed LoginPage.login call
+},
   
     
 
-  afterSuite: async function () {
-    
-    console.log("Clearing app data after suite...");
-    await new Promise((resolve, reject) => {
+afterSuite: async function () {
+  console.log("Clearing app data after suite...");
+  await new Promise((resolve, reject) => {
       exec(
-        "adb shell pm clear com.primefocushealth.pfhapp",
-        (err, stdout, stderr) => {
-          if (err) {
-            console.error(`Error clearing app data: ${err.message}`);
-            return reject(err);
+          "adb shell pm clear com.appiumpro.the_app", // Correct package name
+          (err, stdout, stderr) => {
+              if (err) {
+                  console.error(`Error clearing app data: ${err.message}`);
+                  return reject(err);
+              }
+              console.log("App data cleared:", stdout);
+              resolve();
           }
-          console.log("App data cleared:", stdout);
-          resolve();
-        }
       );
-    });
-  },
+  });
+},
 
   afterTest: async function (
     test,
