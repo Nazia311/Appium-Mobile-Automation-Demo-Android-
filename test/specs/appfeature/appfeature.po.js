@@ -126,13 +126,46 @@ class app {
     if(text==='Hello'){
         console.log('Clipboard text is correct first time');
 }
+ 
 
-
-// click back
-const back = $('~Navigate Up');
-await back.click();
-await driver.pause(2000);
 }
+
+async verifysecondtime() {
+  await driver.pause(2000);
+  // Click message input
+  const messageInput = $('~messageInput');
+  // Clear the text
+  await messageInput.clearValue();
+  console.log('Cleared the message input.');
+
+  // Type "World" in the message input
+  await messageInput.setValue('World');
+  console.log('Typed "World" in the message input.');
+
+  // Set the new text
+  const setText = $('~setClipboardText'); // Define setText here
+  await setText.click();
+  console.log('Set clipboard text to "World".');
+  await driver.pause(1000);
+
+  // Click on clipboard text
+  const getText2 = $('~refreshClipboardText');
+  await getText2.click();
+  await driver.pause(2000);
+
+  // Check the text is "World"
+  const clipboardText2 = $('~World');
+  const text2 = await clipboardText2.getText();
+  if (text2 === 'World') {
+      console.log('Clipboard text is correct: "World".');
+  }
+}
+async back(){
+    // click back
+    const back = $('~Navigate Up');
+    await back.click();
+    await driver.pause(2000);
+  }
 }
 
 
