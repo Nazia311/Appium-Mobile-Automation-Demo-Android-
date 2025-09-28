@@ -1,6 +1,6 @@
 # Appium Automation with WebdriverIO
 
-[Appium Installation Guideline](https://docs.google.com/document/d/1Lv9Pr9rNak70uv7DKgg_p7Lf8Z0oTiuyKhCXxwyfbCY/edit?tab=t.0)
+[Appium Installation Guideline]
 
 ## Prerequisites
 - Node.js installed [Check Node Version `node -v`]
